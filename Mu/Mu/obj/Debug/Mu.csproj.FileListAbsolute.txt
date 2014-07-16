@@ -30,3 +30,35 @@ c:\users\daniel\documents\visual studio 2013\Projects\Mu\Mu\bin\System.Web.WebPa
 c:\users\daniel\documents\visual studio 2013\Projects\Mu\Mu\obj\Debug\Mu.dll
 c:\users\daniel\documents\visual studio 2013\Projects\Mu\Mu\obj\Debug\Mu.pdb
 c:\users\daniel\documents\visual studio 2013\Projects\Mu\Mu\obj\Debug\Mu.csprojResolveAssemblyReference.cache
+D:\Projects\Mu\Mu\Mu\bin\Mu.dll.config
+D:\Projects\Mu\Mu\Mu\bin\Mu.dll
+D:\Projects\Mu\Mu\Mu\bin\Mu.pdb
+D:\Projects\Mu\Mu\Mu\bin\Antlr3.Runtime.dll
+D:\Projects\Mu\Mu\Mu\bin\EntityFramework.dll
+D:\Projects\Mu\Mu\Mu\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Mu\Mu\Mu\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Projects\Mu\Mu\Mu\bin\Newtonsoft.Json.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.Formatting.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Http.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Http.WebHost.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Mvc.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Optimization.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Providers.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Razor.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.dll
+D:\Projects\Mu\Mu\Mu\bin\WebGrease.dll
+D:\Projects\Mu\Mu\Mu\bin\EntityFramework.xml
+D:\Projects\Mu\Mu\Mu\bin\Newtonsoft.Json.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.Formatting.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Http.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Http.WebHost.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Mvc.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Web.Razor.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.xml
+D:\Projects\Mu\Mu\Mu\obj\Debug\Mu.csprojResolveAssemblyReference.cache
+D:\Projects\Mu\Mu\Mu\obj\Debug\Mu.dll
+D:\Projects\Mu\Mu\Mu\obj\Debug\Mu.pdb

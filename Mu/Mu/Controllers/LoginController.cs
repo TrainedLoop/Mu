@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Threading;
 
 namespace Mu.Controllers
 {
@@ -22,6 +23,12 @@ namespace Mu.Controllers
         {
             Login.LoginUser(User, Password);
             return RedirectToAction("Index","Home");
+        }
+        public ActionResult LogOut()
+        {
+            Login.Logoff();
+            Thread.Sleep(500);
+            return RedirectToAction("Index", "Home");
         }
 
 

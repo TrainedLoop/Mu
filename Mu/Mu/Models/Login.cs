@@ -42,7 +42,8 @@ namespace Mu.Models
 
             if (MyCookie != null)
             {
-                var query = new MuOnlineEntities().MEMB_INFO.Where(i => i.memb___id == MyCookie["Email"]).SingleOrDefault();
+                string login = MyCookie["Email"];
+                var query = new MuOnlineEntities().MEMB_INFO.Where(i => i.memb___id == login).SingleOrDefault();
                 MyCookie["Email"] = query.memb___id;
                 MyCookie.Expires = DateTime.Now.AddMilliseconds(500);
                 HttpContext.Current.Response.Cookies.Add(MyCookie);

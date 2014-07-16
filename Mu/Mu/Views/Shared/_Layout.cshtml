@@ -4,14 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/themes/base/css")
-    @Styles.Render("~/bundles/jquery")
-    @Styles.Render("~/bundles/jqueryui")
-    @Styles.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/modernizr")
-    @Styles.Render("~/Content/themes/bootstrap/css/")
-   
+    @Styles.Render("~/stylesheets/bootstrap")
+    @RenderSection("cssplugins", false)
+
 
 </head>
 <body>
@@ -38,7 +33,7 @@
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Cadastre-se", "Register", "Client")</li>
+                        <li>@Html.ActionLink("Cadastre-se", "Register", "MuUser")</li>
                     </ul>
                     @using (Html.BeginForm("MuUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
@@ -75,23 +70,11 @@
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Painel<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Cadastrar Produtos", "Register", "Product")</li>                            
+                                <li>@Html.ActionLink("Personagens", "Index", "Painel")</li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vendedores<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Cadastrar vendedor", "Register", "Vendor")</li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Relatórios<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Geral", "Chargers", "Reports")</li>
-                                <li>@Html.ActionLink("Produtos alocados por vendedor", "AllocatedProductsOnVendor", "Reports")</li>
-                            </ul>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a>Seja Bem Vindo(a), @LoggedUser.memb___id</a></li>
@@ -114,7 +97,9 @@
 
     @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/scripts/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+

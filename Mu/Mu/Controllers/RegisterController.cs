@@ -20,7 +20,7 @@ namespace Mu.Controllers
         public ActionResult MuUser( Register register)
         {
             register.Save();
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
     }
