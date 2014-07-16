@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Styles.Render("~/bundles/jquery")
+    @Styles.Render("~/bundles/jqueryui")
+    @Styles.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/themes/bootstrap/css/")
+   
+
+</head>
+<body>
+    @{
+        Layout = "";
+        var LoggedUser = Mu.Models.Login.GetLoggedUser();
+
+    }
+
+
+    @{
+        //=======================================================SEM=CADASTRO====================================================================
+        if (LoggedUser == null)
+        {
+            <div class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="font-size:25px;">@Mu.Config.ProjectName</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cadastre-se", "Register", "Client")</li>
+                    </ul>
+                    @using (Html.BeginForm("MuUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a>Login</a></li>
+                            <li><a><input type="text" name="user" class="form-control input-sm" style="height:25px; width:120px;"></a></li>
+                            <li><a>Senha</a></li>
+                            <li><a><input type="password" name="password" class="form-control input-sm" style="height:25px; width:80px;"></a></li>
+                            <li><a><input type="submit" value="Entrar" class="btn btn-success btn-xs"></a></li>
+                        </ul>
+                    }
+                </div><!-- /.nav-collapse -->
+            </div>
+
+        }
+
+
+
+
+//=======================================================User====================================================================
+        else
+        {
+
+            <div class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="font-size:25px;">@Mu.Config.ProjectName</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Cadastrar Produtos", "Register", "Product")</li>                            
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vendedores<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Cadastrar vendedor", "Register", "Vendor")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Relatórios<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Geral", "Chargers", "Reports")</li>
+                                <li>@Html.ActionLink("Produtos alocados por vendedor", "AllocatedProductsOnVendor", "Reports")</li>
+                            </ul>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a>Seja Bem Vindo(a), @LoggedUser.memb___id</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opções de conta <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Editar senha", "editpassword", "Client")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Sair", "logout", "login")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div>
+
+        }
+    }
+
+
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
