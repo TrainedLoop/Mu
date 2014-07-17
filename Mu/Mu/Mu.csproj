@@ -160,6 +160,7 @@
     <Compile Include="Repository\Warehouse.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Imgs\bg.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -218,6 +219,7 @@
     <Content Include="Css\bootstrap.min%28readable%29.css" />
     <Content Include="Css\bootstrap.min%28spaceLab%29.css" />
     <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\custom.css" />
     <Content Include="Css\demo_page.css" />
     <Content Include="Css\demo_table.css" />
     <Content Include="Css\jquery-ui.min.css" />
