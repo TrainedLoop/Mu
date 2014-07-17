@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3F4C00E7-D337-4CDC-AECB-C2FFF1BF95EF}</ProjectGuid>
+    <ProjectGuid>{27564B37-DE19-4C84-B0A5-78ECB4319265}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -39,13 +39,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -140,160 +150,74 @@
     <Compile Include="Models\Painel.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\AccountCharacter.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\AddItemModify.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\Admit_Info.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\BLOCKING.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\BLOCKING_LOG.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\Character.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\CharactersExtensions.cs" />
-    <Compile Include="Repository\CharInfoModify.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\CharInfoModifyOrigin.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\ConnBlockList.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\CURR_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\DelItemModify.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\DEPART_TBL.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\dtproperties.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\dt_getpropertiesbyid_Result.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\dt_getpropertiesbyid_u_Result.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\EVENT_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\FQNW_MODI.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\GameServerInfo.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\Guild.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\GuildMember.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\LEAV_MEMB.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MANG_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MembInfoModify.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MembInfoModifyOrigin.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MEMB_DESC.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MEMB_DETA.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MEMB_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MEMB_NOTICE.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MEMB_STAT.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MEMB__OUT.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MIDS_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MngLog.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MngModifyLog.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MUMNG_AUTH_SKILL.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MUMNG_MANG_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MUMNG_SKILL_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MuOnlineDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MuOnlineDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MuOnlineDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\MuOnlineDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MuOnlineDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\OptionData.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\UUID_LOGINNAME_MAP.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\vCharacterPreview.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\VI_CURR_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\VI_FQNW_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\VI_LEAV_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\VI_MIDS_INFO.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Repository\warehouse.cs">
-      <DependentUpon>MuOnlineDB.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Repository\Character.cs" />
+    <Compile Include="Repository\Maps\CharacterMap.cs" />
+    <Compile Include="Repository\Maps\MembInfoMap.cs" />
+    <Compile Include="Repository\Maps\ViCurrInfoMap.cs" />
+    <Compile Include="Repository\Maps\WarehouseMap.cs" />
+    <Compile Include="Repository\MembInfo.cs" />
+    <Compile Include="Repository\ViCurrInfo.cs" />
+    <Compile Include="Repository\Warehouse.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Css\bootstrap.min%28amelia%29.css" />
-    <Content Include="Css\bootstrap.min.css" />
     <Content Include="Css\bootstrap.min%28readable%29.css" />
     <Content Include="Css\bootstrap.min%28spaceLab%29.css" />
+    <Content Include="Css\bootstrap.min.css" />
     <Content Include="Css\demo_page.css" />
     <Content Include="Css\demo_table.css" />
     <Content Include="Css\jquery-ui.min.css" />
@@ -314,29 +238,30 @@
     <Content Include="Css\Jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Css\Jquery-ui\jquery-ui-1.10.3.custom.min.css" />
     <Content Include="Global.asax" />
-    <EntityDeploy Include="Repository\MuOnlineDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MuOnlineDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Repository\MuOnlineDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MuOnlineDB.edmx</DependentUpon>
-      <LastGenOutput>MuOnlineDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Repository\MuOnlineDB.edmx.diagram">
-      <DependentUpon>MuOnlineDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="Repository\MuOnlineDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MuOnlineDB.edmx</DependentUpon>
-      <LastGenOutput>MuOnlineDB.cs</LastGenOutput>
-    </Content>
+    <Content Include="Content\Site.css" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\JS\collapse.js" />
     <Content Include="Scripts\JS\dropdown.js" />
     <Content Include="Scripts\JS\jquery-1.10.2.min.js" />
     <Content Include="Scripts\JS\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="Scripts\JS\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="Scripts\JS\jquery.dataTables.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -349,18 +274,15 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Painel\Index.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Register\MuUser.cshtml" />
-    <Content Include="Views\Painel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -378,9 +300,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4473</DevelopmentServerPort>
+          <DevelopmentServerPort>31771</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4473/</IISUrl>
+          <IISUrl>http://localhost:31758/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

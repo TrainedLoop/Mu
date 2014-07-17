@@ -8,7 +8,8 @@ namespace Mu.Models
 {
     public static class Login
     {
-        public static MEMB_INFO GetLoggedUser()
+        
+        public static MembInfo GetLoggedUser()
         {
             HttpCookie MyCookie = HttpContext.Current.Request.Cookies["BarretCookie"];
             if (MyCookie == null)
@@ -17,19 +18,21 @@ namespace Mu.Models
             }
             else
             {
+                var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
                 string login =  MyCookie["Email"];
-                MEMB_INFO user = new MuOnlineEntities().MEMB_INFO.Where(i => i.memb___id == login).FirstOrDefault();
+                MembInfo user = section.QueryOver<MembInfo>().Where(i => i.MembId == login).SingleOrDefault();
                 return user;
             }
         }
 
         public static bool LoginUser(string User, string Password)
         {
-            var query = new MuOnlineEntities().MEMB_INFO.Where(i => i.memb___id == User && i.memb__pwd == Password).FirstOrDefault();
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var query = section.QueryOver<MembInfo>().Where(i => i.MembId == User && i.MembPwd == Password).SingleOrDefault();
             if (query == null)
             { return false; }
             HttpCookie MyCookie = new HttpCookie("BarretCookie");
-            MyCookie["Email"] = query.memb___id;
+            MyCookie["Email"] = query.MembId;
             MyCookie.Expires = DateTime.Now.AddDays(1);
             HttpContext.Current.Response.Cookies.Add(MyCookie);
             return true;
@@ -42,9 +45,10 @@ namespace Mu.Models
 
             if (MyCookie != null)
             {
+                var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
                 string login = MyCookie["Email"];
-                var query = new MuOnlineEntities().MEMB_INFO.Where(i => i.memb___id == login).SingleOrDefault();
-                MyCookie["Email"] = query.memb___id;
+                var query = section.QueryOver<MembInfo>().Where(i => i.MembId == login).SingleOrDefault();
+                MyCookie["Email"] = query.MembId;
                 MyCookie.Expires = DateTime.Now.AddMilliseconds(500);
                 HttpContext.Current.Response.Cookies.Add(MyCookie);
             }

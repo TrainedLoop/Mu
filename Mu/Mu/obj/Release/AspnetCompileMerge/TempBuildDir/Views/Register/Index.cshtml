@@ -1,0 +1,19 @@
+﻿@{
+
+}
+
+<div class="col-md-4">
+    <div class="well">
+
+        @using (Html.BeginForm("MuUser", "Register", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <fieldset>
+                <legend>Cadastre-se</legend>
+                <label>Id</label><input type="text" name="Id" id="nome" class="form-control" /><br />
+                <label>Senha</label><input type="password" name="Password" id="password" class="form-control" /><br />
+                <label>Email</label><input type="email" name="Email" id="email" class="form-control" /><br />
+                <button class="btn btn-sm btn-primary" style="float:right;" type="submit">Confirmar</button>
+            </fieldset>
+        }
+    </div>
+</div>

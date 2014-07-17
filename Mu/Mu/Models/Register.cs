@@ -89,9 +89,9 @@ namespace Mu.Models
                 + "'0'"
                 + ")";
 
-            var a = new Repository.MuOnlineEntities();
-
-            a.Database.ExecuteSqlCommand(regscript);
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var query = section.CreateSQLQuery(regscript);
+            query.ExecuteUpdate();
 
 
 

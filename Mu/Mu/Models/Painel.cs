@@ -8,54 +8,53 @@ namespace Mu.Models
 {
     public class Painel
     {
-        public MEMB_INFO User { get; set; }
-        public Painel(MEMB_INFO user)
+        public MembInfo User { get; set; }
+        public Painel(MembInfo user)
         {
             User = user;
         }
-        public List<Character> GetCharacters()
+        public IList<Character> GetCharacters()
         {
-            using (var context = new MuOnlineEntities())
-            {
-                return context.Character.Where(i => i.AccountID == User.memb___id).ToList();
-            }
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+
+            return section.QueryOver<Character>().Where(i => i.Accountid == User.MembId).List();
+
         }
         public string Reset(string characterName)
         {
-            using (var context = new MuOnlineEntities())
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+
+            var character = section.QueryOver<Character>().Where(i => i.Accountid == User.MembId && i.Name == characterName).SingleOrDefault();
+            if (User.Vip > 0)
             {
-                var character = context.Character.Where(i => i.AccountID == User.memb___id && i.Name == characterName).FirstOrDefault();
-                if (User.vip > 0)
+                if (character.Clevel >= 350)
                 {
-                    if (character.cLevel >= 350)
-                    {
-                        character.cLevel = 1;
-                        character.MapNumber = 0;
-                        character.MapPosX = 183;
-                        character.MapPosY = 120;
-                        character.MapDir = 2;
-                        character.Experience = 0;
-                        character.resets = character.resets + 1;
-                        context.SaveChanges();
-                        return "Reset efetuado com sucesso";
-                    }
-                    return "Level Insuficiente para resetar";
-                }
-                else if (character.cLevel >= 400)
-                {
-                    character.cLevel = 1;
-                    character.MapNumber = 0;
-                    character.MapPosX = 183;
-                    character.MapPosY = 120;
-                    character.MapDir = 2;
+                    character.Clevel = 1;
+                    character.Mapnumber = 0;
+                    character.Mapposx = 183;
+                    character.Mapposy = 120;
+                    character.Mapdir = 2;
                     character.Experience = 0;
-                    context.SaveChanges();
+                    character.Resets = character.Resets + 1;
+                    section.Update(character);
                     return "Reset efetuado com sucesso";
                 }
-                else
-                return "Level Insuficiente para resetar somente VIPS resetam no 350";
+                return "Level Insuficiente para resetar";
             }
+            else if (character.Clevel >= 400)
+            {
+                character.Clevel = 1;
+                character.Mapnumber = 0;
+                character.Mapposx = 183;
+                character.Mapposy = 120;
+                character.Mapdir = 2;
+                character.Experience = 0;
+                section.Update(character);
+                return "Reset efetuado com sucesso";
+            }
+            else
+                return "Level Insuficiente para resetar somente VIPS resetam no 350";
         }
-
     }
+
 }
