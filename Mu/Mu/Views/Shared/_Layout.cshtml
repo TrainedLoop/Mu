@@ -95,8 +95,9 @@
     }
 
 
-
-    @RenderBody()
+    <div class="container">
+        @RenderBody()
+    </div>
 
     @Scripts.Render("~/scripts/bootstrap")
     @RenderSection("scripts", required: false)

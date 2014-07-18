@@ -17,10 +17,22 @@ namespace Mu.Controllers
             return View();
         }
 
-        public ActionResult MuUser( Register register)
+        public ActionResult MuUser(Register register)
         {
-            register.Save();
-            return RedirectToAction("Index", "Home");
+            try
+            {
+
+                register.Save();
+                return RedirectToAction("Index", "Home");
+
+            }
+            catch (Exception ex)
+            {
+                @ViewBag.Error = ex.Message;
+                return View("Index");
+            }
+
+
         }
 
     }

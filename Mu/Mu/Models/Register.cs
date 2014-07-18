@@ -10,10 +10,28 @@ namespace Mu.Models
     {
         public string Id { get; set; }
         public string Password { get; set; }
+        public string PasswordConfirm { get; set; }
+        public string Nome { get; set; }
+        public string SecretQuestion { get; set; }
+        public string SecretResp { get; set; }
         public string Email { get; set; }
 
         public void Save()
         {
+            
+
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+
+            var user = section.QueryOver<MembInfo>().Where(i => i.MembId == Id).SingleOrDefault();
+            if (user != null)
+            {
+                throw new Exception("Usuario já Cadastrado");
+            }
+            var validation = new Models.Validations.Inputs();
+            validation.UserID(Id);
+            validation.PasswordString(Password, PasswordConfirm);
+            validation.EmailString(Email);
+
             var regscript = "SET IDENTITY_INSERT MEMB_INFO ON INSERT INTO MEMB_INFO ("
                 + "memb_guid,"
                 + "memb___id,"
@@ -47,8 +65,8 @@ namespace Mu.Models
                 + "'1234',"
                 + "'12343',"
                 + "'" + Email + "',"
-                + "'0',"
-                + "'0',"
+                + "'" + SecretQuestion + "',"
+                + "'" + SecretResp + "',"
                 + "'0',"
                 + "'1',"
                 + "'2003-11-23',"
@@ -89,7 +107,6 @@ namespace Mu.Models
                 + "'0'"
                 + ")";
 
-            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
             var query = section.CreateSQLQuery(regscript);
             query.ExecuteUpdate();
 

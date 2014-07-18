@@ -27,5 +27,14 @@ namespace Mu.Controllers
             return View("Index",painel.GetCharacters());
         }
 
+        public ActionResult DistributorPoints(string CharName)
+        {
+            var user = Login.GetLoggedUser();
+            Painel painel = new Painel(Login.GetLoggedUser());
+
+
+            return View("Index", painel.GetCharacters());
+        }
+
     }
 }
