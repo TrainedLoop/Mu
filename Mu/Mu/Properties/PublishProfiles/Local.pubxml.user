@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 22:17:05</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>07/20/2014 04:53:11</publishTime>
+      <publishTime>07/20/2014 08:29:52</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>07/20/2014 04:53:11</publishTime>
+      <publishTime>07/20/2014 08:29:52</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>07/16/2014 22:16:58</publishTime>
@@ -37,7 +37,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 22:17:03</publishTime>
     </File>
     <File Include="bin/Mu.dll">
-      <publishTime>07/20/2014 04:52:49</publishTime>
+      <publishTime>07/20/2014 08:14:59</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>07/16/2014 22:17:02</publishTime>
@@ -700,7 +700,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 22:22:38</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>07/20/2014 04:53:04</publishTime>
+      <publishTime>07/20/2014 08:29:50</publishTime>
     </File>
     <File Include="Scripts/jquery-1.8.2.js">
       <publishTime>07/16/2014 22:16:59</publishTime>
@@ -763,7 +763,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 22:17:01</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>07/19/2014 10:47:02</publishTime>
+      <publishTime>07/20/2014 08:14:42</publishTime>
     </File>
     <File Include="Views/Painel/DistributorPoints.cshtml">
       <publishTime>07/19/2014 11:45:16</publishTime>
