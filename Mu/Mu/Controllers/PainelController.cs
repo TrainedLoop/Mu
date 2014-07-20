@@ -33,7 +33,30 @@ namespace Mu.Controllers
             Painel painel = new Painel(Login.GetLoggedUser());
 
 
-            return View("Index", painel.GetCharacters());
+            return View(painel.GetCharacters().Where(i => i.Name == CharName).SingleOrDefault());
+        }
+        [HttpPost]
+        public ActionResult AddPoints(string CharName, int strength = 0, int agility = 0, int vitality = 0, int energy = 0)
+        {
+            var user = Login.GetLoggedUser();
+            Painel painel = new Painel(Login.GetLoggedUser());
+            var character = painel.GetCharacters().Where(i => i.Name == CharName).SingleOrDefault();
+            try
+            {
+
+                painel.DistributePoints(CharName, strength, agility, vitality, energy);
+                ViewBag.Save = "Pontos Distribuidos";
+                return View("DistributorPoints",character);
+
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View("DistributorPoints", character);
+            }
+  
+
+
         }
 
     }

@@ -33,8 +33,8 @@ namespace Mu.Repository.Maps {
 			Map(x => x.MailChek).Column("mail_chek");
 			Map(x => x.BlocCode).Column("bloc_code").Not.Nullable();
 			Map(x => x.Ctl1Code).Column("ctl1_code").Not.Nullable();
-			Map(x => x.Creditos).Column("creditos").Not.Nullable();
 			Map(x => x.Vip).Column("vip").Not.Nullable();
+			Map(x => x.Creditos).Column("creditos").Not.Nullable();
         }
     }
 }

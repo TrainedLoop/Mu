@@ -28,7 +28,7 @@ namespace Mu.Controllers
             }
             catch (Exception ex)
             {
-                @ViewBag.Error = ex.Message;
+                ViewBag.Error = ex.Message;
                 return View("Index");
             }
 

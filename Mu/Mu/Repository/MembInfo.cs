@@ -27,7 +27,7 @@ namespace Mu.Repository {
         public virtual string MailChek { get; set; }
         public virtual string BlocCode { get; set; }
         public virtual string Ctl1Code { get; set; }
-        public virtual int Creditos { get; set; }
         public virtual int Vip { get; set; }
+        public virtual int Creditos { get; set; }
     }
 }

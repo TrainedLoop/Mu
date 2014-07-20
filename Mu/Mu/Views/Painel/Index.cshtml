@@ -33,6 +33,9 @@
                         <th style="text-align:center">
                             Resetar
                         </th>
+                        <th style="text-align:center">
+                            Pontos
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,6 +59,13 @@
                                 {
                                     <input type="hidden" name="CharName" value="@item.Name" />
                                     <input type="submit" value="Resetar" />
+                                }
+                            </td>
+                            <td>
+                                @using (Html.BeginForm("DistributorPoints", "Painel", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="CharName" value="@item.Name" />
+                                    <input type="submit" value="Pontos" />
                                 }
                             </td>
                         </tr>

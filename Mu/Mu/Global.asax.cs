@@ -29,7 +29,7 @@ namespace Mu
             SessionFactory = Fluently.Configure()
               .Database(
                 MsSqlConfiguration.MsSql2008.ConnectionString
-                (c => c.Server("mubangu.servegame.com").Database("MuOnline").Username("sa").Password("cel96558618*"))
+                (c => c.Server("107.152.239.54").Database("MuOnline").Username("sa").Password("cel96558618*"))
                 .ShowSql().FormatSql())
                 .Mappings(i => i.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
                 .ExposeConfiguration(c => c.SetProperty("current_session_context_class", "web"))
@@ -44,7 +44,7 @@ namespace Mu
             SessionFactory = Fluently.Configure()
               .Database(
                MsSqlConfiguration.MsSql2008.ConnectionString
-                (c => c.Server("mubangu.servegame.com").Database("MuOnline").Username("sa").Password("cel96558618*")))
+                (c => c.Server("127.0.0.1").Database("MuOnline").Username("sa").Password("cel96558618*")))
                 .Mappings(i => i.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
                 .ExposeConfiguration(c => c.SetProperty("current_session_context_class", "web"))
                 .ExposeConfiguration(c => c.Properties.Add("hbm2ddl.keywords", "none"))

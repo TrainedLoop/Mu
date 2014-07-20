@@ -9,7 +9,7 @@
 
 
 </head>
-<body>
+<body class="background">
     @{
         Layout = "";
         var LoggedUser = Mu.Models.Login.GetLoggedUser();
@@ -95,8 +95,9 @@
     }
 
 
-
-    @RenderBody()
+    <div class="container">
+        @RenderBody()
+    </div>
 
     @Scripts.Render("~/scripts/bootstrap")
     @RenderSection("scripts", required: false)
