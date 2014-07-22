@@ -27,6 +27,14 @@ namespace Mu.Controllers
             return View("Index",painel.GetCharacters());
         }
 
+        public ActionResult DeleteChar(string CharName)
+        {
+            var user = Login.GetLoggedUser();
+            Painel painel = new Painel(Login.GetLoggedUser());
+            painel.DeleteChar(CharName);
+            return View("Index", painel.GetCharacters());
+        }
+
         public ActionResult DistributorPoints(string CharName)
         {
             var user = Login.GetLoggedUser();
@@ -35,6 +43,7 @@ namespace Mu.Controllers
 
             return View(painel.GetCharacters().Where(i => i.Name == CharName).SingleOrDefault());
         }
+       
         [HttpPost]
         public ActionResult AddPoints(string CharName, int strength = 0, int agility = 0, int vitality = 0, int energy = 0)
         {

@@ -34,6 +34,7 @@
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("Cadastre-se", "Index", "Register")</li>
+                        <li>@Html.ActionLink("Rankings Reset", "Reset", "Ranking")</li>
                         <li><a href="http://download.danielporto.net/MuBeta.rar">Download</a></li>
                     </ul>
                     @using (Html.BeginForm("MuUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))

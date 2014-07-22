@@ -140,14 +140,17 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LauncherController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PainelController.cs" />
+    <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Painel.cs" />
+    <Compile Include="Models\Ranking.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\Validartions\Inputs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -409,6 +412,8 @@
     <Content Include="Views\Painel\Index.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Painel\DistributorPoints.cshtml" />
+    <Content Include="Views\Launcher\Index.cshtml" />
+    <Content Include="Views\Ranking\Reset.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

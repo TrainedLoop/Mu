@@ -7,7 +7,7 @@ namespace Mu
 {
     public class Config
     {
-        public const string ProjectName = "MUney Cassino BETA V0.2 ";
+        public const string ProjectName = "MUney Cassino BETA V0.4 ";
 
     }
 }

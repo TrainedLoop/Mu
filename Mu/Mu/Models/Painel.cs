@@ -56,7 +56,18 @@ namespace Mu.Models
             else
                 return "Level Insuficiente para resetar somente VIPS resetam no 350";
         }
+        public void DeleteChar(string characterName)
+        {
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
 
+            var character = section.QueryOver<Character>().Where(i => i.Accountid == User.MembId && i.Name == characterName).SingleOrDefault();
+           
+            if(character!= null)
+            {
+                section.Delete(character);
+            }
+
+        }
         public void DistributePoints(string CharName, int strength, int agility, int vitality, int energy)
         {
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();

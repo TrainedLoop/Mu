@@ -12,17 +12,17 @@ namespace Mu.Models.Validations
         private class RegularExpressions
         {
             public static Regex Email() { return new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$"); }
-            public static Regex Password() { return new Regex(@"^(?=[^\d_].*?\d)\w(\w|[!@#$%]){4,16}"); }
+            public static Regex Password() { return new Regex(@"^(?=[^\d_].*?\d)\w(\w|[!@#$%]){4,10}"); }
         }
         private class ErrorMessages
         {
             public const string UserEmpty = "Digite Seu ID";
-            public const string UserInvalid = "ID com no maximo 16 caracteres";
+            public const string UserInvalid = "ID com no maximo 10 caracteres";
             //Emails
             public const string EmailEmpty = "Digite Seu Email";
             public const string EmailInvalid = "Email Invalido";
             //Password
-            public const string PasswordInvalid = "A senha deve ter pelo menos uma letra e um numero e ser de 4 a 16 caracteres";
+            public const string PasswordInvalid = "A senha deve ter pelo menos uma letra e um numero e ser de 4 a 10 caracteres";
             public const string PasswordNotSame = "Senhas não correspondem";
             //IP
             public const string IPInvalid = "Senhas não correspondem";
@@ -32,7 +32,7 @@ namespace Mu.Models.Validations
             if (string.IsNullOrEmpty(UserID))
                 throw new Exception(ErrorMessages.UserEmpty);
 
-            if (UserID.Length> 16)
+            if (UserID.Length> 10)
                 throw new Exception(ErrorMessages.EmailInvalid);
 
         }

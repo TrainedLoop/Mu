@@ -12,10 +12,10 @@
                             <strong>Droga!</strong> <a href="#" class="alert-link">@ViewBag.Error</a><br /> Tente denovo.
                         </div>
                     }
-                    <label>Id</label><input type="text" name="Id" id="nome" class="form-control" /><br />
-                    <label>Senha</label><input type="password" name="Password" id="password" class="form-control" /><br />
-                    <label>Confirmar Senha</label><input type="password" name="PasswordConfirm" id="password" class="form-control" /><br />
-                    <label>Email</label><input type="email" name="Email" id="email" class="form-control" /><br />
+                    <label>Id</label><input type="text" maxlength="10" name="Id" id="nome" class="form-control" /><br />
+                    <label>Senha</label><input type="password" maxlength="10" name="Password" id="password" class="form-control" /><br />
+                    <label>Confirmar Senha</label><input maxlength="10" type="password" name="PasswordConfirm" id="password" class="form-control" /><br />
+                    <label>Email</label><input type="email" maxlength="50" name="Email" id="email" class="form-control" /><br />
                     <label>Pergunta Secreta</label><input type="text" name="Id" id="SecretQuestion" class="form-control" /><br />
                     <label>Resposta Secreta</label><input type="text" name="Id" id="SecretResp" class="form-control" /><br />
                     <button class="btn btn-sm btn-primary" style="float:right;" type="submit">Confirmar</button>
