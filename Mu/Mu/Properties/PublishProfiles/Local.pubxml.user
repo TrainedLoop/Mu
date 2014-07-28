@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 07:44:38</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>07/21/2014 15:16:44</publishTime>
+      <publishTime>07/28/2014 13:29:26</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>07/21/2014 15:16:44</publishTime>
+      <publishTime>07/28/2014 13:29:26</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>07/16/2014 07:44:37</publishTime>
@@ -37,7 +37,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 07:44:37</publishTime>
     </File>
     <File Include="bin/Mu.dll">
-      <publishTime>07/21/2014 15:16:41</publishTime>
+      <publishTime>07/28/2014 13:29:24</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>07/16/2014 07:44:38</publishTime>
@@ -45,8 +45,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/NHibernate.dll">
       <publishTime>07/17/2014 14:52:29</publishTime>
     </File>
+    <File Include="bin/pt-br/System.Net.Http.resources.dll">
+      <publishTime>07/10/2012 23:31:08</publishTime>
+    </File>
+    <File Include="bin/pt-br/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>07/10/2012 23:31:08</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
+    </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>07/16/2014 07:44:38</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
       <publishTime>07/16/2014 07:44:38</publishTime>
@@ -697,10 +709,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 12:32:39</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>07/17/2014 14:52:29</publishTime>
+      <publishTime>07/28/2014 12:09:47</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>07/21/2014 15:16:43</publishTime>
+      <publishTime>07/28/2014 13:29:25</publishTime>
     </File>
     <File Include="Scripts/jquery-1.8.2.js">
       <publishTime>07/17/2014 14:52:29</publishTime>
@@ -763,16 +775,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/17/2014 14:52:29</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>07/21/2014 09:28:43</publishTime>
+      <publishTime>07/23/2014 10:36:52</publishTime>
     </File>
     <File Include="Views/Launcher/Index.cshtml">
-      <publishTime>07/21/2014 13:24:14</publishTime>
+      <publishTime>07/23/2014 10:36:36</publishTime>
     </File>
     <File Include="Views/Painel/DistributorPoints.cshtml">
       <publishTime>07/21/2014 11:36:09</publishTime>
     </File>
     <File Include="Views/Painel/Index.cshtml">
       <publishTime>07/21/2014 13:16:45</publishTime>
+    </File>
+    <File Include="Views/Ranking/Reset.cshtml">
+      <publishTime>07/22/2014 15:49:17</publishTime>
     </File>
     <File Include="Views/Register/Index.cshtml">
       <publishTime>07/21/2014 13:09:42</publishTime>
@@ -784,7 +799,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 07:44:37</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>07/18/2014 09:17:16</publishTime>
+      <publishTime>07/23/2014 13:35:42</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>07/16/2014 07:44:37</publishTime>
@@ -793,7 +808,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2014 07:44:37</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/21/2014 15:16:42</publishTime>
+      <publishTime>07/28/2014 13:27:51</publishTime>
     </File>
   </ItemGroup>
 </Project>

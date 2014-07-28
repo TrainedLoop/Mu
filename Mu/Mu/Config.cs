@@ -7,7 +7,9 @@ namespace Mu
 {
     public class Config
     {
-        public const string ProjectName = "MUney Cassino BETA V0.4 ";
+        public const string ProjectName = "MU Cassino " + Version;
+        public const string DownloadClientUrl = "https://db.tt/kQbuCGYX";
+        public const string Version = "Beta V06";
 
     }
 }

@@ -34,7 +34,8 @@
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("Cadastre-se", "Index", "Register")</li>
-                        <li><a href="http://download.danielporto.net/MuBeta.rar">Download</a></li>
+                        <li>@Html.ActionLink("Rankings Reset", "Reset", "Ranking")</li>
+                        <li><a href="@Mu.Config.DownloadClientUrl">Download</a></li>
                     </ul>
                     @using (Html.BeginForm("MuUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
@@ -76,7 +77,7 @@
                                 <li>@Html.ActionLink("Personagens", "Index", "Painel")</li>
                             </ul>
                         </li>
-                        <li><a href="http://download.danielporto.net/MuBeta.rar">Download</a></li>
+                        <li><a href="@Mu.Config.DownloadClientUrl">Download</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a>Seja Bem Vindo(a), @LoggedUser.MembId</a></li>

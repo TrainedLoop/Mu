@@ -23,8 +23,14 @@ namespace Mu.Models
         public string Reset(string characterName)
         { 
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var UserStatus = section.QueryOver<MembStat>().Where(i => i.MembId == User.MembId).SingleOrDefault();
 
+            if(UserStatus.Connectstat != 0)
+            {
+                return "Deslogue do jogo antes de resetar!";
+            }
             var character = section.QueryOver<Character>().Where(i => i.Accountid == User.MembId && i.Name == characterName).SingleOrDefault();
+
             if (User.Vip > 0)
             {
                 if (character.Clevel >= 350)
@@ -92,7 +98,7 @@ namespace Mu.Models
                 character.Energy = (Int16)(character.Energy + energy);
                 character.Leveluppoint = (Int16)(character.Leveluppoint - strength - agility - vitality - energy);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new Exception("Nenhum Atributo pode passar de 32767");
             }    

@@ -117,3 +117,9 @@ D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.xml
 D:\Projects\Mu\Mu\Mu\obj\Release\Mu.csprojResolveAssemblyReference.cache
 D:\Projects\Mu\Mu\Mu\obj\Release\Mu.dll
 D:\Projects\Mu\Mu\Mu\obj\Release\Mu.pdb
+D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.WebRequest.dll
+D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.xml
+D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.WebRequest.xml
+D:\Projects\Mu\Mu\Mu\bin\pt-br\System.Net.Http.resources.dll
+D:\Projects\Mu\Mu\Mu\bin\pt-br\System.Net.Http.WebRequest.resources.dll
