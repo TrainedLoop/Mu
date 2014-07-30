@@ -143,6 +143,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Controllers\AdmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LauncherController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -164,6 +165,8 @@
     <Compile Include="Repository\Maps\CharacterMap.cs" />
     <Compile Include="Repository\Maps\MembInfoMap.cs" />
     <Compile Include="Repository\Maps\MembStatMap.cs" />
+    <Compile Include="Repository\Maps\TeamMap.cs" />
+    <Compile Include="Repository\Team.cs" />
     <Compile Include="Repository\Maps\ViCurrInfoMap.cs" />
     <Compile Include="Repository\Maps\WarehouseMap.cs" />
     <Compile Include="Repository\MembInfo.cs" />
@@ -422,6 +425,7 @@
     <Content Include="Views\Shared\_Reset.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Ranking\Reset.cshtml" />
+    <Content Include="Views\Painel\Team.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -62,10 +62,12 @@ namespace Mu.Controllers
             {
                 ViewBag.Error = ex.Message;
                 return View("DistributorPoints", character);
-            }
-  
+            } 
+        }
 
-
+        public ActionResult Team(string CharName)
+        {
+            return View();
         }
 
     }
