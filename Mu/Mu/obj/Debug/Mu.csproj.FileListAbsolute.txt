@@ -124,3 +124,7 @@ D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.xml
 D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.WebRequest.xml
 D:\Projects\Mu\Mu\Mu\bin\pt-br\System.Net.Http.resources.dll
 D:\Projects\Mu\Mu\Mu\bin\pt-br\System.Net.Http.WebRequest.resources.dll
+C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Net.Http.dll
+C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Net.Http.WebRequest.dll
+C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Net.Http.xml
+C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Net.Http.WebRequest.xml

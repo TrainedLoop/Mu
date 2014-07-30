@@ -12,7 +12,8 @@ namespace Mu.Models
         {
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
 
-             return section.QueryOver<Character>().Where(i => i.Resets > 0).Take(50).List().OrderByDescending(i => i.Resets).ToList();
+
+            return section.QueryOver<Character>().Where(i => i.Resets > 0).List().OrderByDescending(i => i.Resets).ToList().Take(50).ToList();
         }
     }
 }
