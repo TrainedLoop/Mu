@@ -2,20 +2,25 @@
     ViewBag.Title = "Index";
 }
 
-<div class="container">
-    <div class="col-md-8 col-md-offset-2 vcenter">
-        <div class="jumbotron">
-            <center>
-                <h1>ATUALIZOU!!!@Mu.Config.Version</h1>
-                <h2>
-                    Faça o <a href="@Mu.Config.DownloadClientUrl">Download</a><br />
-                </h2>
-                <p>e execute o .reg                    com a resolução e depois o Launcher.exe</p>
 
-            </center>
-        </div>
+    <div class="jumbotron">
+        <center>
+
+            <h2>Bem Vindo ao Mu Cassino Beta Test.</h2>
+            <p>
+                Entre e @Html.ActionLink("registre-se", "Index", "Register") e faça o <a href="@Mu.Config.DownloadClientUrl">download</a> para ter acesso antecipado
+                ao unico Mu que vai pagar pra quem jogar
+            </p>
+            <p>Data de Estreia 10/10/2014 as 12:00.</p>
+        </center>
     </div>
-</div>
+
+@*<div class="col-md-4 well">
+    @Html.RenderPartial("_Reset",null)
+</div>*@
+
+
+
 
 
 

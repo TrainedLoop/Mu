@@ -3,54 +3,52 @@
 @{
     int Count = 1;
 }
-<div class="container">
-    <div class="col-lg-12 well">
-        <legend>Ranking Reset</legend>
-        <div class="col-lg-12">
-            <table class="table table-striped table-hover text-center">
-                <thead>
+<div class="col-lg-12 well">
+    <center><h3>Ranking Reset</h3></center>
+    <div class="col-lg-12">
+        <table class="table table-striped table-hover table-condensed text-center">
+            <thead>
+                <tr>
+                    <th style="text-align:center">
+                        Colocação
+                    </th>
+                    <th style="text-align:center">
+                        Nome
+                    </th>
+                    <th style="text-align:center">
+                        Class
+                    </th>
+                    <th style="text-align:center">
+                        Resets
+                    </th>
+                    <th style="text-align:center">
+                        Conta
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
                     <tr>
-                        <th style="text-align:center">
-                            Colocação
-                        </th>
-                        <th style="text-align:center">
-                            Nome
-                        </th>
-                        <th style="text-align:center">
-                            Class
-                        </th>
-                        <th style="text-align:center">
-                            Resets
-                        </th>
-                        <th style="text-align:center">
-                            Conta
-                        </th>
+                        <td>
+                            @(Count)º
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @(((CharacterExtensions.Classes)item.Class).ToString().Replace("_", " "))
+                        </td>
+                        <td>
+                            @item.Resets
+                        </td>
+                        <td>
+                            @item.Accountid
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                @(Count)º
-                            </td>
-                            <td>
-                                @item.Name
-                            </td>
-                            <td>
-                                @(((CharacterExtensions.Classes)item.Class).ToString().Replace("_", " "))
-                            </td>
-                            <td>
-                                @item.Resets
-                            </td>
-                            <td>
-                                @item.Accountid
-                            </td>
-                        </tr>
-                        { Count++; }
-                    }
-                </tbody>
-            </table>
-        </div>
+                    { Count++; }
+                }
+            </tbody>
+        </table>
     </div>
 </div>

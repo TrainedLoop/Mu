@@ -7,7 +7,7 @@ namespace Mu
 {
     public class Config
     {
-        public const string ProjectName = "MU Cassino " + Version;
+        public const string ProjectName = "MU Cassino Beta Test";
         public const string DownloadClientUrl = "https://db.tt/kQbuCGYX";
         public const string Version = "Beta V06";
 

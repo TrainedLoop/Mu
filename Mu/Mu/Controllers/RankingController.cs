@@ -15,7 +15,7 @@ namespace Mu.Controllers
         public ActionResult Reset()
         {
 
-            return View(Ranking.GetResetRanking());
+            return View(Ranking.GetResetRanking(50));
         }
 
     }

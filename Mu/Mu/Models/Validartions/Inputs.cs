@@ -17,7 +17,7 @@ namespace Mu.Models.Validations
         private class ErrorMessages
         {
             public const string UserEmpty = "Digite Seu ID";
-            public const string UserInvalid = "ID com no maximo 10 caracteres";
+            public const string UserInvalid = "ID com no maximo 10 caracteres e no minimo 4";
             //Emails
             public const string EmailEmpty = "Digite Seu Email";
             public const string EmailInvalid = "Email Invalido";
@@ -32,7 +32,7 @@ namespace Mu.Models.Validations
             if (string.IsNullOrEmpty(UserID))
                 throw new Exception(ErrorMessages.UserEmpty);
 
-            if (UserID.Length> 10)
+            if (UserID.Length > 10 || UserID.Length < 4)
                 throw new Exception(ErrorMessages.EmailInvalid);
 
         }

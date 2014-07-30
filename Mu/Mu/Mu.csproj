@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{27564B37-DE19-4C84-B0A5-78ECB4319265}</ProjectGuid>
+    <ProjectGuid>{0C6332EF-7094-40ED-A3C1-BA67F7F2CDB7}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -20,7 +20,6 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,19 +50,21 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NHibernate">
-      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+      <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -71,7 +72,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -85,11 +86,15 @@
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
@@ -123,7 +128,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
@@ -165,10 +169,11 @@
     <Compile Include="Repository\MembInfo.cs" />
     <Compile Include="Repository\MembStat.cs" />
     <Compile Include="Repository\ViCurrInfo.cs" />
-    <Compile Include="Repository\Warehouse.cs" />
+    <Compile Include="Repository\warehouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Imgs\bg.jpg" />
+    <Content Include="Content\Imgs\bg2.jpg" />
     <Content Include="Content\Shop\Axes\battle.jpg" />
     <Content Include="Content\Shop\Axes\chaos.jpg" />
     <Content Include="Content\Shop\Axes\double.jpg" />
@@ -208,27 +213,27 @@
     <Content Include="Content\Shop\Scepters\great.jpg" />
     <Content Include="Content\Shop\Scepters\lord.jpg" />
     <Content Include="Content\Shop\Scepters\master.jpg" />
-    <Content Include="Content\Shop\Sets\bk\rphoenix.bmp" />
-    <Content Include="Content\Shop\Sets\bk\phoenix.bmp" />
     <Content Include="Content\Shop\Sets\bk\bdragon.bmp" />
-    <Content Include="Content\Shop\Sets\bk\dragon.bmp" />
-    <Content Include="Content\Shop\Sets\bk\plate.bmp" />
-    <Content Include="Content\Shop\Sets\bk\scale.bmp" />
-    <Content Include="Content\Shop\Sets\bk\leather.bmp" />
-    <Content Include="Content\Shop\Sets\bk\bronze.bmp" />
     <Content Include="Content\Shop\Sets\bk\brass.bmp" />
-    <Content Include="Content\Shop\Sets\me\redspirit.bmp" />
+    <Content Include="Content\Shop\Sets\bk\bronze.bmp" />
+    <Content Include="Content\Shop\Sets\bk\dragon.bmp" />
+    <Content Include="Content\Shop\Sets\bk\leather.bmp" />
+    <Content Include="Content\Shop\Sets\bk\phoenix.bmp" />
+    <Content Include="Content\Shop\Sets\bk\plate.bmp" />
+    <Content Include="Content\Shop\Sets\bk\rphoenix.bmp" />
+    <Content Include="Content\Shop\Sets\bk\scale.bmp" />
     <Content Include="Content\Shop\Sets\me\divine.bmp" />
     <Content Include="Content\Shop\Sets\me\guardian.bmp" />
-    <Content Include="Content\Shop\Sets\me\spirit.bmp" />
-    <Content Include="Content\Shop\Sets\me\wind.bmp" />
-    <Content Include="Content\Shop\Sets\me\vine.bmp" />
+    <Content Include="Content\Shop\Sets\me\redspirit.bmp" />
     <Content Include="Content\Shop\Sets\me\silk.bmp" />
+    <Content Include="Content\Shop\Sets\me\spirit.bmp" />
+    <Content Include="Content\Shop\Sets\me\vine.bmp" />
+    <Content Include="Content\Shop\Sets\me\wind.bmp" />
     <Content Include="Content\Shop\Sets\mg\hurricane.bmp" />
-    <Content Include="Content\Shop\Sets\mg\thunder.bmp" />
     <Content Include="Content\Shop\Sets\mg\storm.bmp" />
-    <Content Include="Content\Shop\Sets\sm\darksoul.bmp" />
+    <Content Include="Content\Shop\Sets\mg\thunder.bmp" />
     <Content Include="Content\Shop\Sets\sm\bone.bmp" />
+    <Content Include="Content\Shop\Sets\sm\darksoul.bmp" />
     <Content Include="Content\Shop\Sets\sm\grandsoul.bmp" />
     <Content Include="Content\Shop\Sets\sm\legendary.bmp" />
     <Content Include="Content\Shop\Sets\sm\pad.bmp" />
@@ -295,6 +300,7 @@
     <Content Include="Content\Shop\Swords\short.jpg" />
     <Content Include="Content\Shop\Swords\spirit.jpg" />
     <Content Include="Content\Shop\Swords\thunder.jpg" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -353,7 +359,7 @@
     <Content Include="Css\bootstrap.min%28readable%29.css" />
     <Content Include="Css\bootstrap.min%28spaceLab%29.css" />
     <Content Include="Css\bootstrap.min.css" />
-    <Content Include="Css\custom.css" />
+    <Content Include="Css\Custom.css" />
     <Content Include="Css\demo_page.css" />
     <Content Include="Css\demo_table.css" />
     <Content Include="Css\jquery-ui.min.css" />
@@ -374,10 +380,9 @@
     <Content Include="Css\Jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Css\Jquery-ui\jquery-ui-1.10.3.custom.min.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <None Include="Properties\PublishProfiles\mu.danielporto.net - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Mu Rar.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <None Include="Scripts\jquery-1.8.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -411,10 +416,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Painel\Index.cshtml" />
-    <Content Include="Views\Register\Index.cshtml" />
-    <Content Include="Views\Painel\DistributorPoints.cshtml" />
     <Content Include="Views\Launcher\Index.cshtml" />
+    <Content Include="Views\Painel\DistributorPoints.cshtml" />
+    <Content Include="Views\Painel\Index.cshtml" />
+    <Content Include="Views\Shared\_Reset.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Ranking\Reset.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -439,9 +445,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>31771</DevelopmentServerPort>
+          <DevelopmentServerPort>2808</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:31758/</IISUrl>
+          <IISUrl>http://localhost:1699/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,125 +1,45 @@
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Mu.dll.config
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Mu.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Mu.pdb
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Antlr3.Runtime.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\EntityFramework.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\FluentNHibernate.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Iesi.Collections.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\log4net.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Newtonsoft.Json.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\NHibernate.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Net.Http.Formatting.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Http.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Http.WebHost.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Mvc.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Optimization.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Providers.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Razor.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\WebGrease.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\FluentNHibernate.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Iesi.Collections.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\log4net.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\NHibernate.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\EntityFramework.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\Newtonsoft.Json.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Net.Http.Formatting.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Http.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Http.WebHost.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Mvc.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.Razor.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.xml
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\obj\Release\Mu.dll
-C:\Users\Daniel\Documents\Visual Studio 2013\Projects\Mu\Mu\Mu\obj\Release\Mu.pdb
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Mu.dll.config
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Mu.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Mu.pdb
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Antlr3.Runtime.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\EntityFramework.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\FluentNHibernate.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Iesi.Collections.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\log4net.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Newtonsoft.Json.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\NHibernate.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Net.Http.Formatting.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Http.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Http.WebHost.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Mvc.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Optimization.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Providers.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Razor.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\WebGrease.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\FluentNHibernate.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Iesi.Collections.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\log4net.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\NHibernate.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\EntityFramework.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\Newtonsoft.Json.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Net.Http.Formatting.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Http.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Http.WebHost.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Mvc.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Razor.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\obj\Release\Mu.csprojResolveAssemblyReference.cache
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\obj\Release\Mu.dll
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\obj\Release\Mu.pdb
-D:\Projects\Mu\Mu\Mu\bin\Mu.dll.config
-D:\Projects\Mu\Mu\Mu\bin\Mu.dll
-D:\Projects\Mu\Mu\Mu\bin\Mu.pdb
-D:\Projects\Mu\Mu\Mu\bin\Antlr3.Runtime.dll
-D:\Projects\Mu\Mu\Mu\bin\EntityFramework.dll
-D:\Projects\Mu\Mu\Mu\bin\FluentNHibernate.dll
-D:\Projects\Mu\Mu\Mu\bin\Iesi.Collections.dll
-D:\Projects\Mu\Mu\Mu\bin\log4net.dll
-D:\Projects\Mu\Mu\Mu\bin\Microsoft.Web.Infrastructure.dll
-D:\Projects\Mu\Mu\Mu\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-D:\Projects\Mu\Mu\Mu\bin\Newtonsoft.Json.dll
-D:\Projects\Mu\Mu\Mu\bin\NHibernate.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.Formatting.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Http.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Http.WebHost.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Mvc.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Optimization.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Providers.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Razor.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.dll
-D:\Projects\Mu\Mu\Mu\bin\WebGrease.dll
-D:\Projects\Mu\Mu\Mu\bin\FluentNHibernate.xml
-D:\Projects\Mu\Mu\Mu\bin\Iesi.Collections.xml
-D:\Projects\Mu\Mu\Mu\bin\log4net.xml
-D:\Projects\Mu\Mu\Mu\bin\NHibernate.xml
-D:\Projects\Mu\Mu\Mu\bin\EntityFramework.xml
-D:\Projects\Mu\Mu\Mu\bin\Newtonsoft.Json.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.Formatting.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Http.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Http.WebHost.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Mvc.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Web.Razor.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.xml
-D:\Projects\Mu\Mu\Mu\obj\Release\Mu.csprojResolveAssemblyReference.cache
-D:\Projects\Mu\Mu\Mu\obj\Release\Mu.dll
-D:\Projects\Mu\Mu\Mu\obj\Release\Mu.pdb
-D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.WebRequest.dll
-D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.xml
-D:\Projects\Mu\Mu\Mu\bin\System.Net.Http.WebRequest.xml
-D:\Projects\Mu\Mu\Mu\bin\pt-br\System.Net.Http.resources.dll
-D:\Projects\Mu\Mu\Mu\bin\pt-br\System.Net.Http.WebRequest.resources.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Mu.dll.config
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Mu.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Mu.pdb
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Antlr3.Runtime.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\EntityFramework.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\FluentNHibernate.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Iesi.Collections.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\log4net.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Newtonsoft.Json.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\NHibernate.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Net.Http.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Net.Http.Formatting.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Net.Http.WebRequest.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Http.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Http.WebHost.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Mvc.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Optimization.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Providers.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Razor.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.WebPages.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.WebPages.Razor.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\WebGrease.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\FluentNHibernate.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Iesi.Collections.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\log4net.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\NHibernate.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\EntityFramework.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\Newtonsoft.Json.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Net.Http.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Net.Http.Formatting.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Net.Http.WebRequest.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Http.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Http.WebHost.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Mvc.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.Razor.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.WebPages.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\System.Web.WebPages.Razor.xml
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\pt-br\System.Net.Http.resources.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\bin\pt-br\System.Net.Http.WebRequest.resources.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\obj\Release\Mu.dll
+C:\Users\daniel.porto\Documents\Visual Studio 2013\Projects\Mu\Mu\obj\Release\Mu.pdb

@@ -1,6 +1,5 @@
 ﻿@model Mu.Repository.Character
-<div class="col-md-4 col-md-offset-4">
-    <div class="well">
+    <div class="col-md-12 well">
 
         @using (Html.BeginForm("AddPoints", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
@@ -36,4 +35,3 @@
             </fieldset>
         }
     </div>
-</div>
