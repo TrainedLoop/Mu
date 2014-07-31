@@ -20,12 +20,13 @@ namespace Mu.Models
             return section.QueryOver<Character>().Where(i => i.Accountid == User.MembId).List();
 
         }
+
         public string Reset(string characterName)
-        { 
+        {
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
             var UserStatus = section.QueryOver<MembStat>().Where(i => i.MembId == User.MembId).SingleOrDefault();
 
-            if(UserStatus.Connectstat != 0)
+            if (UserStatus.Connectstat != 0)
             {
                 return "Deslogue do jogo antes de resetar!";
             }
@@ -67,8 +68,8 @@ namespace Mu.Models
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
 
             var character = section.QueryOver<Character>().Where(i => i.Accountid == User.MembId && i.Name == characterName).SingleOrDefault();
-           
-            if(character!= null)
+
+            if (character != null)
             {
                 section.Delete(character);
             }
@@ -89,7 +90,7 @@ namespace Mu.Models
             if (character.Strength <= 0 || character.Dexterity <= 0 || character.Vitality <= 0 || character.Energy <= 0)
                 throw new Exception("Nenhum Atributo pode passar ser menor que 1");
 
-            
+
             try
             {
                 character.Strength = (Int16)(character.Strength + strength);
@@ -101,11 +102,60 @@ namespace Mu.Models
             catch (Exception)
             {
                 throw new Exception("Nenhum Atributo pode passar de 32767");
-            }    
+            }
 
             section.Update(character);
         }
 
+        public void CreateTeam(string charName, string teamName)
+        {
+            var vld = new Validations.Inputs();
+            vld.Team(teamName);
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var character = GetCharacters().Where(i => i.Name == charName).SingleOrDefault();
+            if (character.MemberOfTeam != null)
+            {
+                throw new Exception("O Personagem " + character.Name + " já em membro do time " + character.MemberOfTeam.Name);
+            }
+            Team team = new Team() { Name = teamName, Lider = character, IsFull = false };
+            if (team.Members == null)
+                team.Members = new List<Character>();
+            team.Members.Add(character);
+            section.Save(team);
+            character.MemberOfTeam = team;
+            section.Save(character);
+        }
+
+        public void ApllyToTeam(string CharName, int teamId)
+        {
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var character = GetCharacters().Where(i => i.Name == CharName).SingleOrDefault();
+            Team team = section.QueryOver<Team>().Where(i => i.Id == teamId).SingleOrDefault();
+            if (section.QueryOver<TeamMemberRequests>().Where(i => i.Closed == false && i.Character == character && i.Team == team).RowCount() > 0)
+                throw new Exception("Solicitação já enviada.");
+            var request = new TeamMemberRequests() { Team = team, Character = character, Closed = false };
+            section.Save(request);
+        }
+
+        public void AccepApplyToTeam(int requestId)
+        {
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var request = section.QueryOver<TeamMemberRequests>().Where(i => i.Id == requestId).SingleOrDefault();
+            if (request.Team.Members.Count() < 4)
+            {
+                if (request.Team.Members.Where(i => i == request.Character).Count() == 0)
+                {
+                    request.Team.Members.Add(request.Character);
+                    request.Character.MemberOfTeam = request.Team;
+                    request.Closed = true;
+                    if (request.Team.Members.Count() > 4)
+                    {
+                        request.Team.IsFull = true;
+                    }
+                }
+            }
+
+        }
     }
 
 

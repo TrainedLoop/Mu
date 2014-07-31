@@ -74,39 +74,66 @@ namespace Mu.Controllers
             ViewBag.CharName = CharName;
             if (character.MemberOfTeam != null)
             {
+                if (character.MemberOfTeam.Lider == character)
+                    ViewBag.Request = section.QueryOver<TeamMemberRequests>().Where(i => i.Closed == false && i.Team == character.MemberOfTeam).List();
                 return View(character.MemberOfTeam);
             }
-
+            ViewBag.Teams = section.QueryOver<Team>().Where(i => !i.IsFull).List();
             return View();
 
         }
 
         public ActionResult ApplyToTeam(string CharName, int teamId)
         {
-            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
             Painel painel = new Painel(Login.GetLoggedUser());
-            var character = painel.GetCharacters().Where(i => i.Name == CharName).SingleOrDefault();
-            Team Team = section.QueryOver<Team>().Where(i => i.Id == teamId).SingleOrDefault();
-            Team.MembersToAprove.Add(character);
-            return View();
+            try
+            {
+                painel.ApllyToTeam(CharName, teamId);
+                ViewBag.Result = "Sucesso";
+                return View("Index", painel.GetCharacters());
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Result = ex.Message;
+                return View("Index", painel.GetCharacters());
+            }
+
+        }
+
+
+        public ActionResult AcceptApply(int requestId)
+        {
+            Painel painel = new Painel(Login.GetLoggedUser());
+            try
+            {
+                painel.AccepApplyToTeam(requestId);
+                ViewBag.Result = "Sucesso";
+                return View("Index", painel.GetCharacters());
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Result = ex.Message;
+                return View("Index", painel.GetCharacters());
+            }
+
         }
 
 
         public ActionResult CreateTeam(string charName, string teamName)
         {
-            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
             Painel painel = new Painel(Login.GetLoggedUser());
-            var character = painel.GetCharacters().Where(i => i.Name == charName).SingleOrDefault();
-            if (section.QueryOver<Team>().Where(i => i.Name == teamName).RowCount() > 0)
-                throw new Exception("Nome Ja Existe");
-            Team team = new Team() { Name = teamName, Lider = character };
-            if (team.Members == null)
-                team.Members = new List<Character>();
-            section.Save(team);
-            character.MemberOfTeam = team;
-            section.Save(character);
-            return View();
-        }
+            try
+            {
+                painel.CreateTeam(charName, teamName);
+                ViewBag.Result = "Sucesso";
+                return View("Index", painel.GetCharacters());
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Result = ex.Message;
+                return View("Index", painel.GetCharacters());
+            }
 
+        }
     }
 }

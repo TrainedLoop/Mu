@@ -17,9 +17,9 @@ namespace Mu.Repository.Maps
 			Map(x => x.Name).Column("Name");
             Map(x => x.Score).Column("Score");
             Map(x => x.Img).Column("img").Nullable();
+            Map(x => x.IsFull).Column("IsFull");
             References(x => x.Lider).Column("LeaderOfTeam");
             HasMany(x => x.Members).AsBag().Cascade.All();
-            HasMany(x => x.MembersToAprove).AsBag().Cascade.All();
         }
     }
 }

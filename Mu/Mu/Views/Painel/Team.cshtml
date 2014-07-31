@@ -1,6 +1,8 @@
-﻿@model Mu.Team
+﻿@model Mu.Repository.Team
 
 @{
+    List<Mu.Repository.Team> teams = ViewBag.Teams;
+    List<Mu.Repository.TeamMemberRequests> requests = ViewBag.Request;
 
 }
 
@@ -8,14 +10,123 @@
 <div class="col-md-12 well">
     @if (Model == null)
     {
-        <p>Personagem @ViewBag.CharName não se encontra em nenhum time</p>
+        <label class="text-danger">Personagem @ViewBag.CharName não se encontra em nenhum time</label>
         <br />
-        <p> Criar Time</p>
+        <h2> Criar Time</h2>
         using (Html.BeginForm("CreateTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <input type="hidden" name="charName" value="@ViewBag.CharName" />
             <label>Nome</label><input type="text" maxlength="10" name="teamName" id="nome" class="form-control" /><br />
             <button class="btn btn-sm btn-primary" style="float:right;" type="submit">Criar</button>
+        }
+        <br />
+        <h2> Entrar em Time</h2>
+        if (teams.Count > 0)
+        {
+            using (Html.BeginForm("ApplyToTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="hidden" name="charName" value="@ViewBag.CharName" />
+                <label>Times Incompletos</label>
+                <select name="teamId" class="form-control">
+                    @foreach (var item in teams)
+                    {
+                        <option value="@item.Id"> @item.Name - Score:@item.Score</option>
+                    }
+                </select>
+                <br />
+                <button class="btn btn-sm btn-primary" style="float:right;" type="submit">Fazer Pedido</button>
+            }
+        }
+    }
+
+
+    else
+    {
+        <h2>Nome: @Model.Name - Score: @Model.Score</h2>
+        <h3>Membros</h3>
+        <table class="table table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Class
+                    </th>
+                    <th>
+                        Rst
+                    </th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.Members)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @(((Mu.Repository.CharacterExtensions.Classes)item.Class).ToString().Replace("_", " "))
+                    </td>
+                    <td>
+                        @item.Resets
+                    </td>
+                </tr>
+            }
+
+        </table>
+        if (requests != null)
+        {
+            <h3>Solicitações</h3>
+            <table class="table table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th>
+                            Nome
+                        </th>
+                        <th>
+                            Class
+                        </th>
+                        <th>
+                            Rst
+                        </th>
+                        <th>
+                            Aceitar
+                        </th>
+                        <th>
+                            Recusar
+                        </th>
+                    </tr>
+                </thead>
+                @foreach (var item in requests)
+                {
+                    <tr>
+
+                        <td>
+                            @item.Character.Name <input type="hidden" name="requestID" value="@item.Id" />
+                        </td>
+                        <td>
+                            @(((Mu.Repository.CharacterExtensions.Classes)item.Character.Class).ToString().Replace("_", " "))
+                        </td>
+                        <td>
+                            @item.Character.Resets
+                        </td>
+                        <td>
+                            @using (Html.BeginForm("AcceptApply", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {<input type="hidden" value="@item.Id" name="requestId" />
+                                <input class="btn btn-sm btn-primary" value="Aceitar" type="submit">
+                            }
+                        </td>
+                        <td>
+                            @using (Html.BeginForm("ApplyToTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                <input class="btn btn-sm btn-primary" value="Recusar" type="submit">
+                            }
+                        </td>
+
+                    </tr>
+                }
+
+            </table>
 
         }
     }
