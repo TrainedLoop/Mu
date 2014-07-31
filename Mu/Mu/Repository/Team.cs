@@ -12,8 +12,9 @@ namespace Mu
         public virtual string Name { get; set; }
         public virtual int Score { get; set; }
         public virtual string Img { get; set; }
-        public virtual MembInfo Lider { get; set; }
+        public virtual Character Lider { get; set; }
         public virtual IList<Character> Members { get; set; }
+        public virtual IList<Character> MembersToAprove { get; set; }
 
     }
 }

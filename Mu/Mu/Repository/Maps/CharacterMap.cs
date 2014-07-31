@@ -42,6 +42,7 @@ namespace Mu.Repository.Maps {
 			Map(x => x.Dbversion).Column("DbVersion");
 			Map(x => x.Quest).Column("Quest");
 			Map(x => x.Resets).Column("resets").Not.Nullable();
+            References(x => x.MemberOfTeam).Column("MemberOfTeam");
         }
     }
 }

@@ -1,5 +1,22 @@
-﻿@{
-    ViewBag.Title = "Team";
+﻿@model Mu.Team
+
+@{
+
 }
 
-<h2>Team</h2>
+
+<div class="col-md-12 well">
+    @if (Model == null)
+    {
+        <p>Personagem @ViewBag.CharName não se encontra em nenhum time</p>
+        <br />
+        <p> Criar Time</p>
+        using (Html.BeginForm("CreateTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="hidden" name="charName" value="@ViewBag.CharName" />
+            <label>Nome</label><input type="text" maxlength="10" name="teamName" id="nome" class="form-control" /><br />
+            <button class="btn btn-sm btn-primary" style="float:right;" type="submit">Criar</button>
+
+        }
+    }
+</div>

@@ -36,5 +36,6 @@ namespace Mu.Repository {
         public virtual byte? Dbversion { get; set; }
         public virtual byte[] Quest { get; set; }
         public virtual int Resets { get; set; }
+        public virtual Team MemberOfTeam { get; set; }
     }
 }
