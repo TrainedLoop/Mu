@@ -38,6 +38,7 @@
                         <li>@Html.ActionLink("Cadastre-se", "Index", "Register")</li>
                         <li>@Html.ActionLink("Rankings Reset", "Reset", "Ranking")</li>
                         <li><a href="@Mu.Config.DownloadClientUrl">Download</a></li>
+                        <li>@Html.ActionLink("Shop", "Index", "Shop")</li>
                     </ul>
                     @using (Html.BeginForm("MuUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
@@ -80,6 +81,7 @@
                             </ul>
                         </li>
                         <li><a href="@Mu.Config.DownloadClientUrl">Download</a></li>
+                        <li>@Html.ActionLink("Shop", "Index", "Shop")</li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a>Seja Bem Vindo(a), @LoggedUser.MembId</a></li>
@@ -123,10 +125,15 @@
                 </li>
             </ul>
             <h4>Armas</h4>
-            <ul>
-                <li> @Html.ActionLink("Swords", "swords", "shop")    </li>
+            <ul>                
                 <li> @Html.ActionLink("Axes", "axes", "shop")    </li>
+                <li> @Html.ActionLink("Bows", "bows", "shop")    </li>
                 <li> @Html.ActionLink("Maces", "maces", "shop")    </li>
+                <li> @Html.ActionLink("Scepters", "scepters", "shop")    </li>                
+                <li> @Html.ActionLink("Shilds", "shilds", "shop")    </li>    
+                <li> @Html.ActionLink("Spears", "spears", "shop")    </li>    
+                <li> @Html.ActionLink("Staves", "staves", "shop")    </li>    
+                <li> @Html.ActionLink("Swords", "swords", "shop")    </li>    
             </ul>
         </div>
 

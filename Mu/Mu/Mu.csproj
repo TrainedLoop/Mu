@@ -443,6 +443,11 @@
     <Content Include="Views\Shop\DL.cshtml" />
     <Content Include="Views\Shop\Axes.cshtml" />
     <Content Include="Views\Shop\Maces.cshtml" />
+    <Content Include="Views\Shop\Bows.cshtml" />
+    <Content Include="Views\Shop\Staves.cshtml" />
+    <Content Include="Views\Shop\Scepters.cshtml" />
+    <Content Include="Views\Shop\Shilds.cshtml" />
+    <Content Include="Views\Shop\Spears.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

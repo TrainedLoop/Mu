@@ -60,5 +60,34 @@ namespace Mu.Controllers
             var user = Login.GetLoggedUser();
             return View();
         }
+        public ActionResult Bows()
+        {
+            var user = Login.GetLoggedUser();
+            return View();
+        }
+
+        public ActionResult Staves()
+        {
+            var user = Login.GetLoggedUser();
+            return View();
+        }
+
+        public ActionResult Scepters()
+        {
+            var user = Login.GetLoggedUser();
+            return View();
+        }
+
+        public ActionResult Shilds()
+        {
+            var user = Login.GetLoggedUser();
+            return View();
+        }
+
+        public ActionResult Spears()
+        {
+            var user = Login.GetLoggedUser();
+            return View();
+        }
     }
 }

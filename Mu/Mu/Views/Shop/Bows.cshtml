@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "_ShopLayout.cshtml";
+}
+
+<div class="col-md-12 well">
+    <h2>Bows  e CrossBows</h2>
+    @foreach (var item in Mu.Repository.ItensExtensions.Bow)
+    {
+        <div class="col-md-4">
+            <div class="col-md-12 well inner-well">
+                <center>
+                    <label>@item.Name Full</label>
+                    <br />
+                    <img src="@item.Image" class="img-rounded" />
+                    <br /><br />
+                    <p class="text-success">
+                        <b>
+                            @item.Value.ToString("C")
+                        </b>
+                    </p>
+                    <p class="text-info">
+                        <input type="checkbox" /> Adcional (+13+28) R$4,99
+                    </p>
+                    <input type="submit" value="Comprar">
+                </center>
+            </div>
+        </div>
+
+    }
+</div>
