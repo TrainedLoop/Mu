@@ -150,6 +150,7 @@
     <Compile Include="Controllers\PainelController.cs" />
     <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,6 +182,7 @@
     <Content Include="Content\Imgs\bg2.jpg" />
     <Content Include="Content\Shop\Axes\battle.jpg" />
     <Content Include="Content\Shop\Axes\chaos.jpg" />
+    <Content Include="Content\Shop\Axes\crescent.jpg" />
     <Content Include="Content\Shop\Axes\double.jpg" />
     <Content Include="Content\Shop\Axes\elven.jpg" />
     <Content Include="Content\Shop\Axes\gorgon.jpg" />
@@ -227,6 +229,10 @@
     <Content Include="Content\Shop\Sets\bk\plate.bmp" />
     <Content Include="Content\Shop\Sets\bk\rphoenix.bmp" />
     <Content Include="Content\Shop\Sets\bk\scale.bmp" />
+    <Content Include="Content\Shop\Sets\dl\adamantine.jpg" />
+    <Content Include="Content\Shop\Sets\dl\darkmaster.jpg" />
+    <Content Include="Content\Shop\Sets\dl\darksteel.jpg" />
+    <Content Include="Content\Shop\Sets\dl\lplate.jpg" />
     <Content Include="Content\Shop\Sets\me\divine.bmp" />
     <Content Include="Content\Shop\Sets\me\guardian.bmp" />
     <Content Include="Content\Shop\Sets\me\redspirit.bmp" />
@@ -424,10 +430,19 @@
     <Content Include="Views\Launcher\Index.cshtml" />
     <Content Include="Views\Painel\DistributorPoints.cshtml" />
     <Content Include="Views\Painel\Index.cshtml" />
-    <Content Include="Views\Shared\_Reset.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Ranking\Reset.cshtml" />
     <Content Include="Views\Painel\Team.cshtml" />
+    <Content Include="Views\Shop\Index.cshtml" />
+    <Content Include="Views\Shop\_ShopLayout.cshtml" />
+    <Content Include="Views\Shop\Swords.cshtml" />
+    <Content Include="Views\Shop\BK.cshtml" />
+    <Content Include="Views\Shop\SM.cshtml" />
+    <Content Include="Views\Shop\ME.cshtml" />
+    <Content Include="Views\Shop\MG.cshtml" />
+    <Content Include="Views\Shop\DL.cshtml" />
+    <Content Include="Views\Shop\Axes.cshtml" />
+    <Content Include="Views\Shop\Maces.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

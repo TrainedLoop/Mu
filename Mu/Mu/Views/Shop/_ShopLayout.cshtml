@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@Mu.Config.ProjectName</title>
+    @Styles.Render("~/stylesheets/bootstrap")
+    @RenderSection("cssplugins", false)
+</head>
+
+<body class="background">
+
+    @{
+        Layout = "";
+        var LoggedUser = Mu.Models.Login.GetLoggedUser();
+        var ranking = Mu.Models.Ranking.GetResetRanking(10);
+        int Count = 1;
+
+    }
+
+
+    @{
+        //=======================================================SEM=CADASTRO====================================================================
+        if (LoggedUser == null)
+        {
+            <div class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="font-size:25px;">@Mu.Config.ProjectName</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cadastre-se", "Index", "Register")</li>
+                        <li>@Html.ActionLink("Rankings Reset", "Reset", "Ranking")</li>
+                        <li><a href="@Mu.Config.DownloadClientUrl">Download</a></li>
+                    </ul>
+                    @using (Html.BeginForm("MuUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a>Login</a></li>
+                            <li><a><input type="text" name="user" class="form-control input-sm" style="height:25px; width:120px;"></a></li>
+                            <li><a>Senha</a></li>
+                            <li><a><input type="password" name="password" class="form-control input-sm" style="height:25px; width:80px;"></a></li>
+                            <li><a><input type="submit" value="Entrar" class="btn btn-success btn-xs"></a></li>
+                        </ul>
+                    }
+                </div><!-- /.nav-collapse -->
+            </div>
+
+        }
+
+
+
+
+//=======================================================User====================================================================
+        else
+        {
+
+            <div class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="font-size:25px;">@Mu.Config.ProjectName</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Painel <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Personagens", "Index", "Painel")</li>
+                            </ul>
+                        </li>
+                        <li><a href="@Mu.Config.DownloadClientUrl">Download</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a>Seja Bem Vindo(a), @LoggedUser.MembId</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opções de conta <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Sair", "logout", "login")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div>
+
+        }
+    }
+
+
+    <div class="container">
+        <div class="col-md-2 well">
+            <center>
+                <h3>Menu</h3>
+            </center>
+            <br />
+            <h4>Sets</h4>
+            <ul>
+                <li>
+                    @Html.ActionLink("Blade Knight", "bk", "shop")
+                </li>
+                <li>
+                    @Html.ActionLink("Soul Master", "sm", "shop")
+                </li>
+                <li>
+                    @Html.ActionLink("Muse Elf", "me", "shop")
+                </li>
+                <li>
+                    @Html.ActionLink("Magic Gladiator", "mg", "shop")
+                </li>
+                <li>
+                    @Html.ActionLink("Dark Lord", "dl", "shop")
+                </li>
+            </ul>
+            <h4>Armas</h4>
+            <ul>
+                <li> @Html.ActionLink("Swords", "swords", "shop")    </li>
+                <li> @Html.ActionLink("Axes", "axes", "shop")    </li>
+                <li> @Html.ActionLink("Maces", "maces", "shop")    </li>
+            </ul>
+        </div>
+
+        <div class="col-md-10">
+            @RenderBody()
+        </div>
+    </div>
+    @Scripts.Render("~/scripts/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
