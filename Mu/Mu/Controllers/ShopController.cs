@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Mu.Models;
+using Mu.Repository;
 
 namespace Mu.Controllers
 {
@@ -89,5 +90,23 @@ namespace Mu.Controllers
             var user = Login.GetLoggedUser();
             return View();
         }
+        public ActionResult AddToCart(string itemName, decimal value, bool Add)
+        {
+            var user = Login.GetLoggedUser();
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var cart = new ShopItem()
+            {
+                IsClosed = false,
+                Paid = false,
+                Seeled = false,
+                User = user,
+                ItemName = itemName,
+                ItemValue = Add ? value + 5 : value
+            };
+            section.Save(cart);
+
+            return View("Index");
+        }
+
     }
 }

@@ -9,21 +9,28 @@
     {
         <div class="col-md-4">
             <div class="col-md-12 well inner-well">
-                <center>
-                    <label>@item.Name Full</label>
-                    <br />
-                    <img src="@item.Image" class="img-rounded" />
-                    <br /><br />
-                    <p class="text-success">
-                        <b>
-                            @item.Value.ToString("C")
-                        </b>
-                    </p>
-                    <p class="text-info">
-                        <input type="checkbox" /> Adcional (+13+28) R$4,99
-                    </p>
-                    <input type="submit" value="Comprar">
-                </center>
+                @using (Html.BeginForm("AddToCart", "Shop", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <input type="hidden" name="itemName" value="@item.Name" />
+                    <input type="hidden" name="value" value="@item.Value" />
+
+                    <center>
+                        <label>@item.Name Full</label>
+                        <br />
+                        <img src="@item.Image" class="img-rounded" />
+                        <br /><br />
+                        <p class="text-success">
+                            <b>
+                                @item.Value.ToString("C")
+                            </b>
+                        </p>
+                        <p class="text-info">
+                            @Html.CheckBox("Add") Adcional (+13+28) R$4,99
+                        </p>
+                        <input type="submit" value="Adcionar ao Carrinho">
+
+                    </center>
+                }
             </div>
         </div>
 
