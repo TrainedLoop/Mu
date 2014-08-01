@@ -94,16 +94,16 @@ namespace Mu.Controllers
         {
             var user = Login.GetLoggedUser();
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
-            var cart = new ShopItem()
-            {
-                IsClosed = false,
-                Paid = false,
-                Seeled = false,
-                User = user,
-                ItemName = itemName,
-                ItemValue = Add ? value + 5 : value
-            };
-            section.Save(cart);
+            //var cart = new ShopItem()
+            //{
+            //    IsClosed = false,
+            //    Paid = false,
+            //    Seeled = false,
+            //    User = user,
+            //    ItemName = itemName,
+            //    ItemValue = Add ? value + 5 : value
+            //};
+            //section.Save(cart);
 
             return View("Index");
         }

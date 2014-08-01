@@ -167,9 +167,11 @@
     <Compile Include="Repository\Maps\MembInfoMap.cs" />
     <Compile Include="Repository\Maps\MembStatMap.cs" />
     <Compile Include="Repository\Maps\ShopCartMap.cs" />
+    <Compile Include="Repository\Maps\ShopItemMap.cs" />
     <Compile Include="Repository\Maps\TeamMap.cs" />
     <Compile Include="Repository\Maps\TeamMemberRequestsMap.cs" />
     <Compile Include="Repository\ShopCart.cs" />
+    <Compile Include="Repository\ShopItem.cs" />
     <Compile Include="Repository\Team.cs" />
     <Compile Include="Repository\Maps\ViCurrInfoMap.cs" />
     <Compile Include="Repository\Maps\WarehouseMap.cs" />
