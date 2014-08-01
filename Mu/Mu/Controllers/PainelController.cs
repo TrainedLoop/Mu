@@ -100,7 +100,6 @@ namespace Mu.Controllers
 
         }
 
-
         public ActionResult AcceptApply(int requestId)
         {
             Painel painel = new Painel(Login.GetLoggedUser());
@@ -117,8 +116,38 @@ namespace Mu.Controllers
             }
 
         }
+        public ActionResult RecuseApply(int requestId)
+        {
+            Painel painel = new Painel(Login.GetLoggedUser());
+            try
+            {
+                painel.RecuseApplyToTeam(requestId);
+                ViewBag.Result = "Sucesso";
+                return View("Index", painel.GetCharacters());
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Result = ex.Message;
+                return View("Index", painel.GetCharacters());
+            }
 
+        }
 
+        public ActionResult LeaveTeam(string CharName)
+        {
+            Painel painel = new Painel(Login.GetLoggedUser());
+            try
+            {
+                painel.LeaveTeam(CharName);
+                ViewBag.Result = "Sucesso";
+                return View("Index", painel.GetCharacters());
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Result = ex.Message;
+                return View("Index", painel.GetCharacters());
+            }
+        }
         public ActionResult CreateTeam(string charName, string teamName)
         {
             Painel painel = new Painel(Login.GetLoggedUser());
@@ -134,6 +163,22 @@ namespace Mu.Controllers
                 return View("Index", painel.GetCharacters());
             }
 
+        }
+        public ActionResult DeleteTeam(string CharName)
+        {
+            Painel painel = new Painel(Login.GetLoggedUser());
+            try
+            {
+
+                painel.DeleteTeam(CharName);
+                ViewBag.Result = "Sucesso";
+                return View("Index", painel.GetCharacters());
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Result = ex.Message;
+                return View("Index", painel.GetCharacters());
+            }
         }
     }
 }

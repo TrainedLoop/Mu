@@ -117,7 +117,7 @@
                             }
                         </td>
                         <td>
-                            @using (Html.BeginForm("ApplyToTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            @using (Html.BeginForm("RecuseApply", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
                             {
                                 <input class="btn btn-sm btn-primary" value="Recusar" type="submit">
                             }
@@ -128,6 +128,22 @@
 
             </table>
 
+        }
+        if (Model.Lider.Name == ViewBag.CharName)
+        {
+            using (Html.BeginForm("DeleteTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="hidden" name="CharName" value="@ViewBag.CharName">
+                <button class="btn btn-sm btn-danger" style="float:right;" type="submit">Deletar Time</button>
+            }
+        }
+        else
+        {
+            using (Html.BeginForm("LeaveTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="hidden" name="CharName" value="@ViewBag.CharName">
+                <button class="btn btn-sm btn-danger" style="float:right;" type="submit">Sair do Time</button>
+            }
         }
     }
 </div>

@@ -126,6 +126,35 @@ namespace Mu.Models
             section.Save(character);
         }
 
+        public void DeleteTeam(string charName)
+        {
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+
+            var character = GetCharacters().Where(i => i.Name == charName).SingleOrDefault();
+            var team = character.MemberOfTeam;
+
+
+            if (team.Lider == character)
+            {
+                var requests = section.QueryOver<TeamMemberRequests>().Where(i => i.Team == team).List();
+                foreach (var item in requests)
+                {
+                    section.Delete(item);
+                }
+                team.Lider = null;
+                foreach (var item in team.Members)
+                {
+                    item.MemberOfTeam = null;
+                    section.Save(item);
+                }
+                team.Members = null;
+                section.Save(team);
+                section.Delete(team);
+            }
+            else
+                throw new Exception("Você não é o Lider do time");
+
+        }
         public void ApllyToTeam(string CharName, int teamId)
         {
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
@@ -136,7 +165,6 @@ namespace Mu.Models
             var request = new TeamMemberRequests() { Team = team, Character = character, Closed = false };
             section.Save(request);
         }
-
         public void AccepApplyToTeam(int requestId)
         {
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
@@ -152,9 +180,30 @@ namespace Mu.Models
                     {
                         request.Team.IsFull = true;
                     }
+                    var othersRquests = section.QueryOver<TeamMemberRequests>().Where(i => i.Character == request.Character).List();
+                    foreach (var item in othersRquests)
+                    {
+                        item.Character = null;
+                        item.Team = null;
+                        section.Save(item);
+                        section.Delete(item);
+                    }
                 }
             }
 
+        }
+        public void RecuseApplyToTeam(int requestId)
+        {
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var request = section.QueryOver<TeamMemberRequests>().Where(i => i.Id == requestId).SingleOrDefault();
+            request.Closed = true;
+        }
+
+        public void LeaveTeam(string charName)
+        {
+            var character = GetCharacters().Where(i => i.Name == charName).SingleOrDefault();
+            character.MemberOfTeam.Members.Remove(character);
+            character.MemberOfTeam = null;
         }
     }
 
