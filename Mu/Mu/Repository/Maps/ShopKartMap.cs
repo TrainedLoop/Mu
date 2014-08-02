@@ -15,8 +15,10 @@ namespace Mu.Repository.Maps
             LazyLoad();
             Id(x => x.Id).GeneratedBy.Identity().Column("Id");
             References(x => x.User);
-            HasMany(i => i.Requests).AsBag().Cascade.All();
+            HasMany(i => i.Requests).AsBag().Cascade.AllDeleteOrphan();
             Map(i => i.IsOpen).Column("IsOpen");
+            Map(i => i.IsPaid).Column("IsPaid");
+            Map(i => i.IsDeliverd).Column("IsDeliverd");
         }
 
     }

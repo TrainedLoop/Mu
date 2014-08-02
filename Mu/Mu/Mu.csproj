@@ -158,6 +158,7 @@
     <Compile Include="Models\Painel.cs" />
     <Compile Include="Models\Ranking.cs" />
     <Compile Include="Models\Register.cs" />
+    <Compile Include="Models\Shop.cs" />
     <Compile Include="Models\Validartions\Inputs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Character.cs" />
@@ -454,6 +455,7 @@
     <Content Include="Views\Shop\Scepters.cshtml" />
     <Content Include="Views\Shop\Shilds.cshtml" />
     <Content Include="Views\Shop\Spears.cshtml" />
+    <Content Include="Views\Shop\ShowKart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

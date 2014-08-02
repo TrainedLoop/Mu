@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "_ShopLayout.cshtml";
+}
+@model Mu.Repository.ShopKart
+
+<div class="col-lg-12 well">
+    <h3> Itens No Carrinho</h3>
+    @if (Model != null)
+    {
+        if (Model.Requests != null)
+        {
+            <table class="table table-striped table-hover table-condensed text-center">
+                <thead>
+                    <tr>
+                        <th style="text-align:center">
+                            Item
+                        </th>
+                        <th style="text-align:center">
+                            Valor
+                        </th>
+                        <th style="text-align:center">
+                            Adcional
+                        </th>
+                        <th style="text-align:center">
+                            Remover
+                        </th>
+
+                    </tr>
+                </thead>
+                @foreach (var request in Model.Requests.ToList())
+                {
+                    <tr>
+
+                        <td>
+                            @request.Item.ItemName
+                        </td>
+                        <td>
+                            @request.Item.ItemValue.ToString("C")
+                        </td>
+                        <td>
+                            @(request.Item.AddOptions ? "+13 +28" : "+0 +0")
+                        </td>
+                        <td>
+                            @using (Html.BeginForm("RemovoFromCart", "Shop", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                <input type="hidden" name="requestId" value="@request.Id" />
+                                <button class="btn btn-sm btn-danger" type="submit">Remover</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p class="text-danger">Sem Itens No Carrinho</p>
+        }
+    }
+    else
+    {
+        <p class="text-danger">Sem Itens No Carrinho</p>
+    }
+
+</div>

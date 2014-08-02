@@ -10,5 +10,6 @@ namespace Mu.Repository
         public virtual int Id { get; set; }
         public virtual string ItemName { get; set; }
         public virtual decimal ItemValue { get; set; }
+        public virtual bool AddOptions { get; set; }
     }
 }

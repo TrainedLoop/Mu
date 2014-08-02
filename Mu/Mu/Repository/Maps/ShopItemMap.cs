@@ -15,6 +15,7 @@ namespace Mu.Repository.Maps
             Id(x => x.Id).GeneratedBy.Identity().Column("Id");
             Map(x => x.ItemName).Column("ItemName");
             Map(x => x.ItemValue).Column("ItemValue");
+            Map(x => x.AddOptions).Column("AddOptions");
         }
 
     }

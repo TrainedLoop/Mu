@@ -11,5 +11,7 @@ namespace Mu.Repository
         public virtual IList<ShopRequest> Requests { get; set; }
         public virtual MembInfo User { get; set; }
         public virtual bool IsOpen { get; set; }
+        public virtual bool IsPaid { get; set; }
+        public virtual bool IsDeliverd { get; set; }
     }
 }
