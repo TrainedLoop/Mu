@@ -94,16 +94,31 @@ namespace Mu.Controllers
         {
             var user = Login.GetLoggedUser();
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
-            //var cart = new ShopItem()
-            //{
-            //    IsClosed = false,
-            //    Paid = false,
-            //    Seeled = false,
-            //    User = user,
-            //    ItemName = itemName,
-            //    ItemValue = Add ? value + 5 : value
-            //};
-            //section.Save(cart);
+            ShopKart cart = section.QueryOver<ShopKart>().Where(i => i.User == user).SingleOrDefault();
+            if (cart == null)
+                cart = new ShopKart() { User = user };
+
+            if (cart.Requests == null)
+            {
+                cart.Requests = new List<ShopRequest>();
+                section.Save(cart);
+                section.Flush();
+            }
+
+            var item = section.QueryOver<ShopItem>().Where(i => i.ItemName == itemName && i.ItemValue == (Add ? value + 5 : value)).SingleOrDefault();
+            if (item == null)
+            {
+                item = new ShopItem()
+                {
+                    ItemName = itemName,
+                    ItemValue = Add ? value + 5 : value
+
+                };
+                section.Save(item);
+                section.Flush();
+            }
+            cart.Requests.Add(new ShopRequest { Cart = cart, Item = item });
+
 
             return View("Index");
         }

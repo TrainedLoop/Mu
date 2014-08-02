@@ -7,15 +7,15 @@ using FluentNHibernate.Mapping;
 namespace Mu.Repository.Maps
 {
 
-    public class ShopCartMap : ClassMap<ShopCart>
+    public class ShopKartMap : ClassMap<ShopKart>
     {
-        public ShopCartMap()
+        public ShopKartMap()
         {
             Table("ShopCart");
             LazyLoad();
-            Id(x => x.Id).GeneratedBy.Assigned().Column("Id");
+            Id(x => x.Id).GeneratedBy.Identity().Column("Id");
             References(x => x.User);
-            HasMany(i => i.Itens).AsBag().Cascade.All();
+            HasMany(i => i.Requests).AsBag().Cascade.All();
             Map(i => i.IsOpen).Column("IsOpen");
         }
 

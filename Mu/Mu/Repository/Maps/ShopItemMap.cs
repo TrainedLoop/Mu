@@ -12,7 +12,7 @@ namespace Mu.Repository.Maps
         {
             Table("ShopItem");
             LazyLoad();
-            Id(x => x.Id).GeneratedBy.Assigned().Column("Id");
+            Id(x => x.Id).GeneratedBy.Identity().Column("Id");
             Map(x => x.ItemName).Column("ItemName");
             Map(x => x.ItemValue).Column("ItemValue");
         }

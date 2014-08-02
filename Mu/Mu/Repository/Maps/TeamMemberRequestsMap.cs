@@ -13,7 +13,7 @@ namespace Mu.Repository.Maps
         {
             Table("TeamMemberRequests");
             LazyLoad();
-            Id(x => x.Id).GeneratedBy.Assigned().Column("Id");
+            Id(x => x.Id).GeneratedBy.Identity().Column("Id");
             References(x => x.Character);
             References(x => x.Team);
             Map(x => x.Closed).Column("Closed");

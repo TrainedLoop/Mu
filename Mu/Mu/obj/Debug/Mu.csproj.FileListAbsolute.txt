@@ -130,6 +130,6 @@ C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.Razor.xml
 C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.xml
 C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\bin\System.Web.WebPages.Razor.xml
-C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\obj\Debug\Mu.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\obj\Debug\Mu.dll
 C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\obj\Debug\Mu.pdb
+C:\Users\Daniel\Documents\GitHub\Mu\Mu\Mu\obj\Debug\Mu.csprojResolveAssemblyReference.cache
