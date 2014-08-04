@@ -3,9 +3,11 @@ using System.Text;
 using System.Collections.Generic;
 
 
-namespace Mu.Repository {
-    
-    public class MembInfo {
+namespace Mu.Repository
+{
+
+    public class MembInfo
+    {
         public virtual string MembId { get; set; }
         public virtual int MembGuid { get; set; }
         public virtual string MembPwd { get; set; }
@@ -28,6 +30,8 @@ namespace Mu.Repository {
         public virtual string BlocCode { get; set; }
         public virtual string Ctl1Code { get; set; }
         public virtual int Vip { get; set; }
+        public virtual DateTime VipDate { get; set; }
+        public virtual bool isAdm { get; set; }
         public virtual int Creditos { get; set; }
     }
 }
