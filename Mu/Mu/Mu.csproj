@@ -223,6 +223,8 @@
     <Content Include="Content\Shop\Maces\hammer.jpg" />
     <Content Include="Content\Shop\Maces\mace.jpg" />
     <Content Include="Content\Shop\Maces\morning.jpg" />
+    <Content Include="Content\Shop\Promo\Full.jpg" />
+    <Content Include="Content\Shop\Promo\Vip.jpg" />
     <Content Include="Content\Shop\Scepters\battle.jpg" />
     <Content Include="Content\Shop\Scepters\great.jpg" />
     <Content Include="Content\Shop\Scepters\lord.jpg" />
@@ -319,6 +321,7 @@
     <Content Include="Content\Shop\Swords\spirit.jpg" />
     <Content Include="Content\Shop\Swords\thunder.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Shop\Promo\start.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -399,6 +402,7 @@
     <Content Include="Css\Jquery-ui\jquery-ui-1.10.3.custom.min.css" />
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\Mu Rar.pubxml" />
+    <None Include="Properties\PublishProfiles\MuFile.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <None Include="Scripts\jquery-1.8.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -456,6 +460,9 @@
     <Content Include="Views\Shop\Shilds.cshtml" />
     <Content Include="Views\Shop\Spears.cshtml" />
     <Content Include="Views\Shop\ShowKart.cshtml" />
+    <Content Include="Views\Shop\EndCart.cshtml" />
+    <Content Include="Views\Shop\ShowAllKarts.cshtml" />
+    <Content Include="Views\Shop\Pay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,6 +15,16 @@ namespace Mu.Repository
             public decimal Value { get; set; }
 
         }
+
+
+
+        public static List<Item> Promo = new List<Item>()
+        {
+            new Item{ Name = "VIP", Image="/Content/Shop/Promo/Vip.jpg", Value = 15},
+            new Item{ Name = "Personagem Full + Set Full + Arma Full + Rings Full + Asa Full", Image="/Content/Shop/Promo/Full.jpg", Value = 80},        
+            new Item{ Name = "Start Pack", Image="/Content/Shop/Promo/start.jpg", Value = 20},        
+        };
+
         public static List<Item> Swords = new List<Item>()
                 {
                    

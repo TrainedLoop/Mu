@@ -34,7 +34,7 @@ namespace Mu.Models
 
             if (User.Vip > 0)
             {
-                if (character.Clevel >= 350)
+                if (character.Clevel >= 280)
                 {
                     character.Clevel = 1;
                     character.Mapnumber = 0;
@@ -61,7 +61,7 @@ namespace Mu.Models
                 return "Reset efetuado com sucesso";
             }
             else
-                return "Level Insuficiente para resetar somente VIPS resetam no 350";
+                return "Level Insuficiente para resetar somente VIPS resetam no 280";
         }
         public void DeleteChar(string characterName)
         {

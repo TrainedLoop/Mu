@@ -68,7 +68,22 @@ namespace Mu.Models
             cart.Requests.Remove(cart.Requests.Where(i => i.Id == requestId).Single());
 
         }
+        public void CloseKart()
+        {
+            ShowKart().IsOpen = false;
+        }
 
+        public void PayItem(int ShopCartId, string paidInfo)
+        {
+            var kart = ShowAllClosedCarts().Where(i => i.Id == ShopCartId).SingleOrDefault();
+            kart.PaidInfos = paidInfo;
+            kart.IsPaid = true;
+        }
 
+        public IList<ShopKart> ShowAllClosedCarts()
+        {
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            return section.QueryOver<ShopKart>().Where(i => i.User == User && i.IsOpen == false).List();
+        }
     }
 }

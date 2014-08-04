@@ -3,6 +3,11 @@
     background-position: top;
     background-repeat: no-repeat;
     background-color: black;
+    background-attachment:fixed
+}
+
+.inner-well{
+    background-color:#151515;
 }
 
 .vertical-center {
@@ -29,3 +34,4 @@
                            /* reset the font property */
   font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+

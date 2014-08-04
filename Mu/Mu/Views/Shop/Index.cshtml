@@ -1,6 +1,35 @@
 ﻿@{
-    ViewBag.Title = "Index";
     Layout = "_ShopLayout.cshtml";
 }
 
-<h2>Index</h2>
+
+<div class="col-md-12 well">
+    <h2>Sets Blade Knight</h2>
+    @foreach (var item in Mu.Repository.ItensExtensions.Promo)
+    {
+        <div class="col-md-4">
+            <div class="col-md-12 well inner-well">
+                @using (Html.BeginForm("AddToCart", "Shop", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <input type="hidden" name="itemName" value="@item.Name" />
+                    <input type="hidden" name="value" value="@item.Value" />
+
+                    <center>
+                        <label>@item.Name Full</label>
+                        <br />
+                        <img src="@item.Image" class="img-rounded" />
+                        <br /><br />
+                        <p class="text-success">
+                            <b>
+                                @item.Value.ToString("C")
+                            </b>
+                        </p>
+                        <input type="submit" value="Adcionar ao Carrinho">
+
+                    </center>
+                }
+            </div>
+        </div>
+
+    }
+</div>

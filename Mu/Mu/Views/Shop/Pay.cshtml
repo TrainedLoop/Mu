@@ -3,6 +3,7 @@
 }
 @model Mu.Repository.ShopKart
 
+
 <div class="col-lg-12 well">
     <h3> Itens No Carrinho</h3>
     @if (Model != null)
@@ -21,10 +22,6 @@
                         <th style="text-align:center">
                             Adcional
                         </th>
-                        <th style="text-align:center">
-                            Remover
-                        </th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -43,22 +40,15 @@
                             <td>
                                 @(request.Item.AddOptions ? "+13 +28" : "+0 +0")
                             </td>
-                            <td>
-                                @using (Html.BeginForm("RemovoFromCart", "Shop", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                                {
-                                    <input type="hidden" name="requestId" value="@request.Id" />
-                                    <button class="btn btn-sm btn-danger" type="submit">Remover</button>
-                                }
-                            </td>
                         </tr>
                     }
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="4"></td>
+                        <td colspan="3"></td>
                     </tr>
                     <tr>
-                        <th colspan="3" style="text-align:center">
+                        <th colspan="2" style="text-align:center">
                             Total
                         </th>
                         <th style="text-align:center">
@@ -67,10 +57,31 @@
                     </tr>
                 </tfoot>
             </table>
-            using (Html.BeginForm("CloseKart", "Shop", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            <br />
+
+            <p>Dados Para Deposito/Transferencia</p>
+            <p>Banco Itau</p>
+            <p>Agencia: 8486</p>
+            <p>Conta: 26394-3</p>
+            <p> Favorecido: Daniel Santos Porto</p>
+            using (Html.BeginForm("PayAction", "Shop", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
-                <button class="btn btn-sm btn-primary" style="float:right;" type="submit">Finalizar Pedido</button>
+                <div class="col-lg-12 well inner-well">
+                    <p class=" text-info">
+                        Escrava aqui os dados do comprovante de pagamento<br />
+                        Horario, Valor, Numero Transferencia, etc. Todos os dados
+                    </p>
+                    <input type="hidden" name="ShopCartId" value="@Model.Id">
+                    <textarea cols="50" rows="20" name="paidInfo">
+                        Dados do Comprovante
+                    </textarea>
+                    <button class="btn btn-sm btn-primary" style="float:right;" type="submit">Enviar Dados</button>
+                </div>
             }
+
+
+
+
         }
         else
         {

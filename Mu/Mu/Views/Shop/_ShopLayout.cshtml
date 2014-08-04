@@ -84,7 +84,8 @@
                         <li>@Html.ActionLink("Shop", "Index", "Shop")</li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a>Carrinho (@Mu.Models.Shop.GetCount(LoggedUser))</a></li>
+                        <li><a href="/shop/showkart"><button class="btn btn-success btn-xs" >Carrinho (@Mu.Models.Shop.GetCount(LoggedUser))</button></a></li>
+                        <li><a href="/shop/showallkarts"><button class="btn btn-info btn-xs">Meus Pedidos</button></a></li>
                         <li><a>Seja Bem Vindo(a), @LoggedUser.MembId</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opções de conta <b class="caret"></b></a>
