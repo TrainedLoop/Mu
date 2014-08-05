@@ -32,7 +32,7 @@ namespace Mu.Models
             validation.PasswordString(Password, PasswordConfirm);
             validation.EmailString(Email);
 
-            var regscript = "SET IDENTITY_INSERT MEMB_INFO ON INSERT INTO MEMB_INFO ("
+            var regscript = " INSERT INTO MEMB_INFO ("
                 + "memb_guid,"
                 + "memb___id,"
                 + "memb__pwd,"

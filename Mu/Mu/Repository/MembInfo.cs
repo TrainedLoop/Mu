@@ -30,7 +30,7 @@ namespace Mu.Repository
         public virtual string BlocCode { get; set; }
         public virtual string Ctl1Code { get; set; }
         public virtual int Vip { get; set; }
-        public virtual DateTime VipDate { get; set; }
+        //public virtual DateTime VipDate { get; set; }
         public virtual bool isAdm { get; set; }
         public virtual int Creditos { get; set; }
     }
