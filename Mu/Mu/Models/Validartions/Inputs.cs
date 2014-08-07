@@ -29,8 +29,8 @@ namespace Mu.Models.Validations
             public const string PasswordNotSame = "Senhas não correspondem";
 
             //User
-            public const string TeamNameExist = "Esse Time Já Existe";
-            public const string TeamNameInvalid = "Time com no maximo 10 caracteres e no minimo 4";
+            public const string TeamNameExist = "Esse Equipe Já Existe";
+            public const string TeamNameInvalid = "Equipe com no maximo 10 caracteres e no minimo 4";
 
         }
         public void UserID(string UserID)

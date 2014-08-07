@@ -44,6 +44,15 @@ namespace Mu.Controllers
             return View(painel.GetCharacters().Where(i => i.Name == CharName).SingleOrDefault());
         }
 
+        public ActionResult RemovePoints(string CharName)
+        {
+            var user = Login.GetLoggedUser();
+            Painel painel = new Painel(Login.GetLoggedUser());
+
+
+            return View(painel.GetCharacters().Where(i => i.Name == CharName).SingleOrDefault());
+        }
+
         [HttpPost]
         public ActionResult AddPoints(string CharName, int strength = 0, int agility = 0, int vitality = 0, int energy = 0)
         {
@@ -62,6 +71,26 @@ namespace Mu.Controllers
             {
                 ViewBag.Error = ex.Message;
                 return View("DistributorPoints", character);
+            }
+        }
+        [HttpPost]
+        public ActionResult RemovePointsAction(string CharName, int strength = 0, int agility = 0, int vitality = 0, int energy = 0)
+        {
+            var user = Login.GetLoggedUser();
+            Painel painel = new Painel(Login.GetLoggedUser());
+            var character = painel.GetCharacters().Where(i => i.Name == CharName).SingleOrDefault();
+            try
+            {
+
+                painel.RemovePoints(CharName, strength, agility, vitality, energy);
+                ViewBag.Save = "Pontos Removidos";
+                return View("RemovePoints", character);
+
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View("RemovePoints", character);
             }
         }
 

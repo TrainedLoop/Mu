@@ -38,6 +38,10 @@
                         <li>@Html.ActionLink("Cadastre-se", "Index", "Register")</li>
                         <li>@Html.ActionLink("Rankings Reset", "Reset", "Ranking")</li>
                         <li><a href="@Mu.Config.DownloadClientUrl">Download</a></li>
+
+
+
+
                         <li>@Html.ActionLink("Shop", "Index", "Shop")</li>
                     </ul>
                     @using (Html.BeginForm("MuUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -81,8 +85,13 @@
                             </ul>
                         </li>
                         <li>@Html.ActionLink("Rankings Reset", "Reset", "Ranking")</li>
+                        <li>@Html.ActionLink("Contato", "SendMessageToADM", "Message")</li>
                         <li><a href="@Mu.Config.DownloadClientUrl">Download</a></li>
                         <li>@Html.ActionLink("Shop", "Index", "Shop")</li>
+
+
+
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a>Seja Bem Vindo(a), @LoggedUser.MembId</a></li>

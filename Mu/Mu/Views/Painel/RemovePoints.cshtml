@@ -1,0 +1,51 @@
+﻿@model Mu.Repository.Character
+<div class="col-md-12 well">
+
+    @using (Html.BeginForm("RemovePointsAction", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <fieldset>
+            <legend class="text-danger">REMOVEDOR de Pontos</legend>
+            <div class="col-md-12">
+                <div class="col-md-12 alert alert-danger">
+
+                    O Limite de ponstos para destribuir é 32.767!
+                    Cuidado para não perder seus pontos
+
+                </div>
+            </div>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-dismissable alert-danger">
+                        <strong>Droga!</strong> <a href="#" class="alert-link">@ViewBag.Error</a><br /> Tente denovo.
+                    </div>
+                </div>
+            }
+            @if (ViewBag.Save != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-dismissable alert-success">
+                        <strong>Sucesso!</strong> <a href="#" class="alert-link">@ViewBag.Save</a><br />
+                    </div>
+                </div>
+
+            }
+
+            <div class="col-lg-6">
+                <label>Nome: @Model.Name </label><input type="hidden" value="@Model.Name" name="CharName">
+            </div>
+            <div class="col-lg-6">
+                <label> Pontos: @Model.Leveluppoint</label><br />
+            </div>
+            <div class="well-sm">
+                <br /><br />
+                <label>Força @Model.Strength</label><input type="number" min="0" max="32767" placeholder="Remover" name="strength" class="form-control" /><br />
+                <label>Agilidade @Model.Dexterity</label><input type="number" min="0" max="32767" placeholder="Remover" name="agility" class="form-control" /><br />
+                <label>Vitalidade @Model.Vitality</label><input type="number" min="0" max="32767" placeholder="Remover" name="vitality" class="form-control" /><br />
+                <label>Energia @Model.Energy</label><input type="number" min="0" max="32767" placeholder="Remover" name="energy" class="form-control" /><br />
+                <button class="btn btn-sm btn-danger" style="float:right;" type="submit">Remover</button>
+            </div>
+        </fieldset>
+    }
+</div>

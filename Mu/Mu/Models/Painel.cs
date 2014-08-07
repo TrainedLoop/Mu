@@ -21,8 +21,21 @@ namespace Mu.Models
 
         }
 
+        public static IList<MembInfo> GetAlUsers()
+        {
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+
+            return section.QueryOver<MembInfo>().List();
+
+            
+
+        }
+
         public string Reset(string characterName)
         {
+            int NonVipResetLevel = 350;
+            int VipResetLevel = 280;
+
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
             var UserStatus = section.QueryOver<MembStat>().Where(i => i.MembId == User.MembId).SingleOrDefault();
 
@@ -34,7 +47,7 @@ namespace Mu.Models
 
             if (User.Vip > 0)
             {
-                if (character.Clevel >= 280)
+                if (character.Clevel >= VipResetLevel)
                 {
                     character.Clevel = 1;
                     character.Mapnumber = 0;
@@ -48,7 +61,7 @@ namespace Mu.Models
                 }
                 return "Level Insuficiente para resetar";
             }
-            else if (character.Clevel >= 400)
+            else if (character.Clevel >= NonVipResetLevel)
             {
                 character.Clevel = 1;
                 character.Mapnumber = 0;
@@ -61,7 +74,7 @@ namespace Mu.Models
                 return "Reset efetuado com sucesso";
             }
             else
-                return "Level Insuficiente para resetar somente VIPS resetam no 280";
+                return "Level Insuficiente para resetar somente VIPS resetam no "+VipResetLevel;
         }
         public void DeleteChar(string characterName)
         {
@@ -106,6 +119,33 @@ namespace Mu.Models
 
             section.Update(character);
         }
+
+        public void RemovePoints(string CharName, int strength, int agility, int vitality, int energy)
+        {
+            var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
+            var character = section.QueryOver<Character>().Where(i => i.Accountid == User.MembId && i.Name == CharName).SingleOrDefault();
+            if (character.Strength - strength < 100 || character.Vitality + vitality < 100 || character.Dexterity + agility < 100 || character.Energy + energy < 100)
+                throw new Exception("Nenhum Atributo pode ser menor que 100");
+
+            try
+            {
+                character.Strength = (Int16)(character.Strength - strength);
+                character.Vitality = (Int16)(character.Vitality - vitality);
+                character.Dexterity = (Int16)(character.Dexterity - agility);
+                character.Energy = (Int16)(character.Energy - energy);
+                if (character.Leveluppoint + strength + agility + vitality + energy > 32767)
+                    character.Leveluppoint = (Int16)(character.Leveluppoint = 32767);
+                else
+                    character.Leveluppoint = (Int16)(character.Leveluppoint + strength + agility + vitality + energy);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Nenhum Atributo pode passar de 32767 nem ser menor que 100");
+            }
+
+            section.Update(character);
+        }
+
 
         public void CreateTeam(string charName, string teamName)
         {

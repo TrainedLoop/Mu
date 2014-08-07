@@ -10,9 +10,9 @@
 <div class="col-md-12 well">
     @if (Model == null)
     {
-        <label class="text-danger">Personagem @ViewBag.CharName não se encontra em nenhum time</label>
+        <label class="text-danger">Personagem @ViewBag.CharName não se encontra em nenhum Equipe</label>
         <br />
-        <h2> Criar Time</h2>
+        <h2> Criar Equipe</h2>
         using (Html.BeginForm("CreateTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <input type="hidden" name="charName" value="@ViewBag.CharName" />
@@ -20,13 +20,13 @@
             <button class="btn btn-sm btn-primary" style="float:right;" type="submit">Criar</button>
         }
         <br />
-        <h2> Entrar em Time</h2>
+        <h2> Entrar em Equipe</h2>
         if (teams.Count > 0)
         {
             using (Html.BeginForm("ApplyToTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <input type="hidden" name="charName" value="@ViewBag.CharName" />
-                <label>Times Incompletos</label>
+                <label>Equipes Incompletas</label>
                 <select name="teamId" class="form-control">
                     @foreach (var item in teams)
                     {
@@ -134,7 +134,7 @@
             using (Html.BeginForm("DeleteTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <input type="hidden" name="CharName" value="@ViewBag.CharName">
-                <button class="btn btn-sm btn-danger" style="float:right;" type="submit">Deletar Time</button>
+                <button class="btn btn-sm btn-danger" style="float:right;" type="submit">Deletar Equipe</button>
             }
         }
         else
@@ -142,7 +142,7 @@
             using (Html.BeginForm("LeaveTeam", "Painel", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <input type="hidden" name="CharName" value="@ViewBag.CharName">
-                <button class="btn btn-sm btn-danger" style="float:right;" type="submit">Sair do Time</button>
+                <button class="btn btn-sm btn-danger" style="float:right;" type="submit">Sair da Equipe</button>
             }
         }
     }

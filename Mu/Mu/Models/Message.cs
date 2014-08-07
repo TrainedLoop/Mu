@@ -50,7 +50,7 @@ namespace Mu.Models
         {
             var section = Mu.MvcApplication.SessionFactory.GetCurrentSession();
             Repository.Message message = new Repository.Message();
-            message.FromUser = User;
+            message.ToUser = User;
             message.ToAdm = false;
             message.MessageString = messageString;
             message.Answered = false;

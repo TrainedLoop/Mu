@@ -1,0 +1,25 @@
+﻿@model Mu.Repository.MembInfo
+
+@if (Model != null)
+{
+    <div class="col-md-12 well">
+        <h3>Enviar Mensagem para os Administradores!</h3>
+        <div class="col-md-12">
+            <p>Usuario: @Model.MembId</p>
+            @using (Html.BeginForm("SendMessageToADM", "Message", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="col-md-8">
+                    <p>
+                        Escreva sua mensagem, duvida ou relato de bug.
+                        responderemos o mais rapido possivel
+                    </p>
+                    <textarea required class="form-control"  cols="80" rows="25" name="message"></textarea>
+                </div>
+                <div class="col-md-12">
+                    <br />
+                    <input type="submit" value="Enviar" style="float:right" class="btn btn-default" />
+                </div>
+            }
+        </div>
+    </div>
+}

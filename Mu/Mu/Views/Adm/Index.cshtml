@@ -1,0 +1,30 @@
+﻿@model List<string>
+
+
+<div class="col-md-12 well ">
+
+    <div class="col-md-12 well inner-well">
+        Enviar mensagem a player
+        @using (Html.BeginForm("SendMSGToPlayer", "ADM", FormMethod.Post))
+        {
+            <select name="UserName" class="form-control">
+                @foreach (var item in Model)
+                {
+                    <option value="@item">@item</option>
+                }
+            </select>
+            <br />
+
+            <textarea class="form-control" name="message"></textarea>
+            <br />
+            <input type="submit" value="Enviar" class="btn btn-default" />
+        }
+    </div>
+    <div class="col-md-12 well inner-well">
+        <h3>Buscar Conta</h3>
+        <label>Personagem</label>
+        <input type="text" class="form-control" />
+        <p class="text-info">@(ViewBag.Result ?? "")</p>
+        <input type="submit" value="Enviar" class="btn btn-default" />
+    </div>
+</div>

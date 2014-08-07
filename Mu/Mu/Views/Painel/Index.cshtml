@@ -24,7 +24,7 @@
                         Level
                     </th>
                     <th style="text-align:center">
-                        Class
+                        Trocar Class
                     </th>
                     <th style="text-align:center">
                         Resets
@@ -36,10 +36,10 @@
                         Pontos
                     </th>
                     <th style="text-align:center">
-                        Time
+                        Equipe
                     </th>
                     <th style="text-align:center">
-                        Deletar
+                        REMOVER Pontos
                     </th>
                 </tr>
             </thead>
@@ -54,7 +54,8 @@
                             @item.Clevel
                         </td>
                         <td>
-                            @(((CharacterExtensions.Classes)item.Class).ToString().Replace("_", " "))
+
+                            <input type="submit" class="btn btn-sm btn-info" value="@(((CharacterExtensions.Classes)item.Class).ToString().Replace("_", " "))" />
                         </td>
                         <td>
                             @item.Resets
@@ -63,28 +64,28 @@
                             @using (Html.BeginForm("Reset", "Painel", FormMethod.Post))
                             {
                                 <input type="hidden" name="CharName" value="@item.Name" />
-                                <input type="submit" value="Resetar" />
+                                <input type="submit" class="btn btn-sm btn-info" value="Resetar" />
                             }
                         </td>
                         <td>
                             @using (Html.BeginForm("DistributorPoints", "Painel", FormMethod.Post))
                             {
                                 <input type="hidden" name="CharName" value="@item.Name" />
-                                <input type="submit" value="Pontos" />
+                                <input type="submit" class="btn btn-sm btn-info" value=" Distribuir" />
                             }
                         </td>
                         <td>
                             @using (Html.BeginForm("Team", "Painel", FormMethod.Post))
                             {
                                 <input type="hidden" name="CharName" value="@item.Name" />
-                                <input type="submit" value="Time" />
+                                <input type="submit" class="btn btn-sm btn-info" value="Equipe" />
                             }
                         </td>
                         <td>
-                            @using (Html.BeginForm("DeleteChar", "Painel", FormMethod.Post))
+                            @using (Html.BeginForm("RemovePoints", "Painel", FormMethod.Post))
                             {
                                 <input type="hidden" name="CharName" value="@item.Name" />
-                                <input type="submit" value="Deletar" />
+                                <input type="submit" class="btn btn-sm btn-danger" value="Remover" />
                             }
                         </td>
                     </tr>
